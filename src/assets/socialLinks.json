@@ -1,15 +1,21 @@
 [
   {
+    "name": "BiliBili",
+    "icon": "/images/icon/bilibili.png",
+    "tip": "(゜-゜)つロ 干杯 ~",
+    "url": "https://space.bilibili.com/511525107"
+  },
+  {
     "name": "Github",
     "icon": "/images/icon/github.png",
     "tip": "去 Github 看看",
     "url": "https://github.com/Jacky-whq"
   },
   {
-    "name": "BiliBili",
-    "icon": "/images/icon/bilibili.png",
-    "tip": "(゜-゜)つロ 干杯 ~",
-    "url": "https://space.bilibili.com/511525107"
+    "name": "Follow",
+    "icon": "/images/icon/rss.png",
+    "tip": "看看我的RSS订阅 ~",
+    "url": "https://app.follow.is/share/users/Jacky"
   },
   {
     "name": "Email",
