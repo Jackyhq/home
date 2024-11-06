@@ -1,10 +1,5 @@
 <template>
-<iframe
-	title="polymarket-election-map-iframe"
-	src="https://polymarket.com/embed/elections/map?event=presidency&theme=light"
-	width="480"
-	height="360"
-/>
+  <div class="more-content">嗨~~</div>
 </template>
 
 <style lang="scss" scoped>
