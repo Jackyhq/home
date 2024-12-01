@@ -16,12 +16,12 @@
   },
   {
     "icon": "LaptopCode",
-    "name": "站点监测",
+    "name": "站点监控",
     "link": "https://status.jackywhq.cn/"
-  }
+  },
   {
     "icon": "LaptopCode",
-    "name": "服务器监测",
+    "name": "服务器监控",
     "link": "https://nezha.jackywhq.cn/"
   }
 ]
