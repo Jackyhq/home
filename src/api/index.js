@@ -67,9 +67,28 @@ export const getWeather = async (key, city) => {
   return await res.json();
 };
 
-// 获取教书先生天气 API
-// https://api.oioweb.cn/doc/weather/GetWeather
-export const getOtherWeather = async () => {
-  const res = await fetch("https://api.oioweb.cn/api/weather/GetWeather");
-  return await res.json();
+export const getOtherWeather = async （city = null） => {
+let url = 'https://api.vvhan.com/api/weather';
+如果 （城市） {
+url += ？city=${encodeURIComponent（city）};
+}
+try {
+const res = await fetch（url）;
+const data = await res.json（）;
+如果 （data.success） {
+console.log（data， '数据'）;
+ElMessage（{
+message：  当前${data.city}，天气${data.data.type}，温度${data.data.low.replace（“°C”， “”）}-${data.data.high.replace（“°C”， “”）}摄氏度 ，
+持续时间： 3500，
+});
+返回数据;
+} else {
+console.error（'获取天气数据失败：'， data.message）;
+返回 null;
+}
+} catch （错误） {
+console.error（'请求天气数据时出错：'， error）;
+返回 null;
+}
 };
+
