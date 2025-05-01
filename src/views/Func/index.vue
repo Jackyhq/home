@@ -21,7 +21,7 @@
               <span> {{ currentTime.hour }}:{{ currentTime.minute }}:{{ currentTime.second }}</span>
             </div>
           </div>
-          <Weather />
+          
         </div>
       </el-col>
     </el-row>
@@ -33,7 +33,7 @@ import { getCurrentTime } from "@/utils/getTime";
 import { mainStore } from "@/store";
 
 import Hitokoto from "@/components/Hitokoto.vue";
-import Weather from "@/components/Weather.vue";
+
 
 const store = mainStore();
 
@@ -137,13 +137,13 @@ onBeforeUnmount(() => {
           }
         }
       }
-      .weather {
+      /* .weather {
         text-align: center;
         width: 100%;
         text-overflow: ellipsis;
         overflow-x: hidden;
         white-space: nowrap;
-      }
+      } */
     }
   }
 }

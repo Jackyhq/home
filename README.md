@@ -140,7 +140,7 @@ const siteIcon = {
 
 天气及地区获取需要 `高德开放平台` 相关 API
 
-- 前往 [高德开放平台控制台](https://console.amap.com/dev/index) 创建一个 `Web 服务` 类型的 `Key`，并将 `Key` 填入 `.env` 中的 `VITE_WEATHER_KEY` 中
+
 
 也可自行更换其他方式
 
@@ -237,7 +237,7 @@ if (type == 0) {
 
 - [韩小韩 WebAPI 接口](https://api.vvhan.com/)
 - [搏天 API](https://api.btstu.cn/doc/sjbz.php)
-- [教书先生 API](https://api.oioweb.cn/doc/weather/GetWeather)
+
 - [高德开放平台](https://lbs.amap.com/)
 - [Hitokoto 一言](https://hitokoto.cn/)
 
