@@ -124,3 +124,5 @@ onBeforeUnmount(() => {
     to { opacity: 1; }
 }
 </style>
+
+// 移除与时间胶囊相关的所有内容，包括 hourglass-full、时光胶囊、timeData、getTimeCapsule、siteDateStatistics、startDate、startDateText、timeInterval、相关模板和进度条

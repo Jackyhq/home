@@ -31,7 +31,7 @@
 <script setup>
 import { CloseOne, SettingTwo } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
-import TimeCapsule from "@/components/TimeCapsule.vue";
+// 移除 <TimeCapsule /> 组件引用
 import MoreContent from "@/components/MoreContent.vue";
 
 const store = mainStore();
