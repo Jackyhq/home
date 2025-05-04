@@ -19,6 +19,7 @@
           <a :href="config.github" target="_blank">
             {{ config.author }}
           </a>
+          <iframe src="https://status.jackyw.cn/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal;vertical-align: middle;margin-left: 8px;"></iframe>
         </span>
         <!-- 站点备案 -->
         
