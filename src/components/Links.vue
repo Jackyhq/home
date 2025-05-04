@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
   .line {
-    margin: 2rem 0.25rem 1rem;
+    margin: 1rem 0.25rem 0.5rem;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ onBeforeUnmount(() => {
   background-color: #00000040;
   border-radius: 6px;
   padding: 1rem;
-  margin: 1.5rem 0;
+  margin: 0 0;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   .title {
     display: flex;
