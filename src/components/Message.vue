@@ -106,15 +106,24 @@ watch(
       font-family: "Pacifico-Regular";
 
       .bg {
-        font-size: 5rem;
+        font-size: clamp(2.2rem, 10vw, 5rem);
+        @media (max-width: 480px) {
+          font-size: clamp(1.2rem, 12vw, 2.2rem);
+        }
       }
 
       .sm {
         margin-left: 6px;
-        font-size: 2rem;
+        font-size: clamp(1.1rem, 4vw, 2rem);
         @media (min-width: 721px) and (max-width: 789px) {
           display: none;
         }
+        @media (max-width: 480px) {
+          font-size: clamp(0.8rem, 6vw, 1.1rem);
+        }
+      }
+      @media (max-width: 480px) {
+        padding-left: 10px;
       }
     }
     @media (max-width: 768px) {
@@ -124,7 +133,7 @@ watch(
       .name {
         height: 128px;
         .bg {
-          font-size: 4.5rem;
+          font-size: 4rem;
         }
       }
     }
