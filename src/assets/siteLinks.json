@@ -1,22 +1,2 @@
 [
-  {
-    "icon": "Compass",
-    "name": "头像生成",
-    "link": "https://color-avatar.jackywhq.cn/"
-  },
-  {
-    "icon": "Cloud",
-    "name": "图片压缩",
-    "link": "https://pic.jackywhq.cn/"
-  },
-  {
-    "icon": "CompactDisc",
-    "name": "音乐",
-    "link": "https://music.jackywhq.cn/"
-  },
-  {
-    "icon": "LaptopCode",
-    "name": "站点监控",
-    "link": "https://status.jackywhq.cn/"
-  }
 ]

@@ -9,7 +9,7 @@
     "name": "Github",
     "icon": "/images/icon/github.png",
     "tip": "去 Github 看看 ~",
-    "url": "https://github.com/Jacky-whq"
+    "url": "https://github.com/Jackyhq"
   },
   {
     "name": "Follow",
@@ -21,13 +21,7 @@
     "name": "Email",
     "icon": "/images/icon/email.png",
     "tip": "来封 Email ~",
-    "url": "mailto:jacky_whq@qq.com"
-  },
-  {
-    "name": "Telegram",
-    "icon": "/images/icon/telegram.png",
-    "tip": "你懂的 ~",
-    "url": "https://t.me/jackywhq"
+    "url": "mailto:i@jackyw.cn"
   }
 ]
 
