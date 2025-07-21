@@ -51,7 +51,7 @@ const startYear = ref(
   import.meta.env.VITE_SITE_START?.length >= 4 ? 
   import.meta.env.VITE_SITE_START.substring(0, 4) : null
 );
-const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
+// const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
 const siteAuthor = ref(import.meta.env.VITE_SITE_AUTHOR);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;

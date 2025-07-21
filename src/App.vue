@@ -47,8 +47,10 @@ import Box from "@/views/Box/index.vue";
 import MoreSet from "@/views/MoreSet/index.vue";
 import cursorInit from "@/utils/cursor.js";
 import config from "@/../package.json";
+import { useI18n } from "vue-i18n";
 
 const store = mainStore();
+const { t } = useI18n();
 
 // 页面宽度
 const getWidth = () => {
@@ -83,7 +85,7 @@ onMounted(() => {
   // 屏蔽右键
   document.oncontextmenu = () => {
     ElMessage({
-      message: "为了浏览体验，本站禁用右键",
+      message: t('system.rightClickDisabled'),
       grouping: true,
       duration: 2000,
     });
@@ -94,8 +96,9 @@ onMounted(() => {
   window.addEventListener("mousedown", (event) => {
     if (event.button == 1) {
       store.backgroundShow = !store.backgroundShow;
+      const status = store.backgroundShow ? t('system.wallpaperModeOn') : t('system.wallpaperModeOff');
       ElMessage({
-        message: `已${store.backgroundShow ? "开启" : "退出"}壁纸展示状态`,
+        message: t('system.wallpaperMode', { status }),
         grouping: true,
       });
     }

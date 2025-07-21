@@ -1,8 +1,10 @@
-import { h } from "vue";
+import { ElMessage } from "element-plus";
 import dayjs from "dayjs";
+import i18n from "@/locales";
 
 // 时钟
 export const getCurrentTime = () => {
+  const { t } = i18n.global;
   let time = new Date();
   let year = time.getFullYear();
   let month = time.getMonth() + 1 < 10 ? "0" + (time.getMonth() + 1) : time.getMonth() + 1;
@@ -10,7 +12,8 @@ export const getCurrentTime = () => {
   let hour = time.getHours() < 10 ? "0" + time.getHours() : time.getHours();
   let minute = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
   let second = time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds();
-  let weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+  
+  const weekdayKeys = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
   let currentTime = {
     year,
     month,
@@ -18,19 +21,20 @@ export const getCurrentTime = () => {
     hour,
     minute,
     second,
-    weekday: weekday[time.getDay()],
+    weekday: t(`weekdays.${weekdayKeys[time.getDay()]}`),
   };
   return currentTime;
 };
 
 // 时光胶囊
 export const getTimeCapsule = () => {
+  const { t } = i18n.global;
   const now = dayjs();
   const dayText = {
-    day: "今日",
-    week: "本周",
-    month: "本月",
-    year: "本年",
+    day: t('timeCapsule.day'),
+    week: t('timeCapsule.week'),
+    month: t('timeCapsule.month'),
+    year: t('timeCapsule.year'),
   };
   /**
    * 计算时间差的函数
@@ -69,33 +73,35 @@ export const getTimeCapsule = () => {
 
 // 欢迎提示
 export const helloInit = () => {
+  const { t } = i18n.global;
   const hour = new Date().getHours();
   let hello = null;
   if (hour < 6) {
-    hello = "凌晨好";
+    hello = t('greeting.dawn');
   } else if (hour < 9) {
-    hello = "早上好";
+    hello = t('greeting.morning');
   } else if (hour < 12) {
-    hello = "上午好";
+    hello = t('greeting.forenoon');
   } else if (hour < 14) {
-    hello = "中午好";
+    hello = t('greeting.noon');
   } else if (hour < 17) {
-    hello = "下午好";
+    hello = t('greeting.afternoon');
   } else if (hour < 19) {
-    hello = "傍晚好";
+    hello = t('greeting.evening');
   } else if (hour < 22) {
-    hello = "晚上好";
+    hello = t('greeting.night');
   } else {
-    hello = "夜深了";
+    hello = t('greeting.lateNight');
   }
   ElMessage({
     dangerouslyUseHTMLString: true,
-    message: `<strong>${hello}</strong> 欢迎来到我的主页`,
+    message: `<strong>${hello}</strong> ${t('welcome.message')}`,
   });
 };
 
 // 建站日期统计
 export const siteDateStatistics = (startDate) => {
+  const { t } = i18n.global;
   const currentDate = new Date();
   let years = currentDate.getFullYear() - startDate.getFullYear();
   let months = currentDate.getMonth() - startDate.getMonth();
@@ -113,5 +119,5 @@ export const siteDateStatistics = (startDate) => {
     months += 12;
   }
 
-  return `本站已经苟活了 ${years} 年 ${months} 月 ${days} 天`;
+  return t('siteStats.running', { years, months, days });
 };

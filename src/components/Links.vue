@@ -4,19 +4,19 @@
         <Link />
       </Icon>
       <hourglass-full theme="two-tone" size="24" :fill="['#efefef', '#00000020']" />
-      <span class="title">时光胶囊</span>
+      <span class="title">{{ t('timeCapsule.title') }}</span>
     </div>
   <div class="time-capsule">
     <div v-if="timeData" class="all-capsule">
       <div v-for="(item, tag, index) in timeData" :key="index" class="capsule-item">
         <div class="item-title">
           <span class="percentage">
-            {{ item.name }}已度过
+            {{ item.name }}{{ t('timeCapsule.passed') }}
             <strong>{{ item.passed }}</strong>
-            {{ tag === "day" ? "小时" : "天" }}
+            {{ tag === "day" ? t('timeCapsule.hours') : t('timeCapsule.days') }}
           </span>
           <span class="remaining">
-            剩余&nbsp;{{ item.remaining }}&nbsp;{{ tag === "day" ? "小时" : "天" }}
+            {{ t('timeCapsule.remaining') }}&nbsp;{{ item.remaining }}&nbsp;{{ tag === "day" ? t('timeCapsule.hours') : t('timeCapsule.days') }}
           </span>
         </div>
         <el-progress :text-inside="true" :stroke-width="20" :percentage="parseFloat(item.percentage)" />
@@ -33,7 +33,10 @@
 import { HourglassFull } from "@icon-park/vue-next";
 import { getTimeCapsule, siteDateStatistics } from "@/utils/getTime.js";
 import { mainStore } from "@/store";
+import { useI18n } from "vue-i18n";
+
 const store = mainStore();
+const { t } = useI18n();
 
 // 进度条数据
 const timeData = ref(getTimeCapsule());

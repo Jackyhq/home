@@ -14,7 +14,7 @@
         @click="store.musicOpenState = true"
       >
         <music-menu theme="filled" size="18" fill="#efefef" />
-        <span>打开音乐播放器</span>
+        <span>{{ t('music.openPlayer') }}</span>
       </div>
     </Transition>
     <!-- 一言内容 -->
@@ -32,16 +32,18 @@ import { MusicMenu, Error } from "@icon-park/vue-next";
 import { getHitokoto } from "@/api";
 import { mainStore } from "@/store";
 import debounce from "@/utils/debounce.js";
+import { useI18n } from "vue-i18n";
 
 const store = mainStore();
+const { t } = useI18n();
 
 // 开启音乐面板按钮显隐
 const openMusicShow = ref(false);
 
 // 一言数据
 const hitokotoData = reactive({
-  text: "这里应该显示一句话",
-  from: "Jacky",
+  text: t('hitokoto.default'),
+  from: t('hitokoto.author'),
 });
 
 // 获取一言数据
@@ -52,14 +54,14 @@ const getHitokotoData = async () => {
     hitokotoData.from = result.from;
   } catch (error) {
     ElMessage({
-      message: "一言获取失败",
+      message: t('hitokoto.failed'),
       icon: h(Error, {
         theme: "filled",
         fill: "#efefef",
       }),
     });
-    hitokotoData.text = "这里应该显示一句话";
-    hitokotoData.from = "Jacky";
+    hitokotoData.text = t('hitokoto.default');
+    hitokotoData.from = t('hitokoto.author');
   }
 };
 

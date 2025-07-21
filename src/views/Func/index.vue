@@ -12,16 +12,17 @@
         <div class="right cards">
           <div class="time">
             <div class="date">
-              <span>{{ currentTime.year }}&nbsp;年&nbsp;</span>
-              <span>{{ currentTime.month }}&nbsp;月&nbsp;</span>
-              <span>{{ currentTime.day }}&nbsp;日&nbsp;</span>
-              <span class="sm-hidden">{{ currentTime.weekday }}</span>
+              <span>{{ currentTime.year }}&nbsp;{{ t('dateFormat.year') }}&nbsp;</span>
+              <span>{{ currentTime.month }}&nbsp;{{ t('dateFormat.month') }}&nbsp;</span>
+              <span>{{ currentTime.day }}&nbsp;{{ t('dateFormat.day') }}&nbsp;</span>
             </div>
             <div class="text">
               <span> {{ currentTime.hour }}:{{ currentTime.minute }}:{{ currentTime.second }}</span>
             </div>
           </div>
-          <Weather />
+          <div class="weekday">
+            <span>{{ currentTime.weekday }}</span>
+          </div>
         </div>
       </el-col>
     </el-row>
@@ -31,18 +32,16 @@
 <script setup>
 import { getCurrentTime } from "@/utils/getTime";
 import { mainStore } from "@/store";
+import { useI18n } from "vue-i18n";
 
 import Hitokoto from "@/components/Hitokoto.vue";
-import Weather from "@/components/Weather.vue";
 
 const store = mainStore();
+const { t } = useI18n();
 
 // 当前时间
 const currentTime = ref({});
 const timeInterval = ref(null);
-
-// 播放器 id
-const playerHasId = import.meta.env.VITE_SONG_ID;
 
 // 更新时间
 const updateTimeData = () => {
@@ -137,9 +136,11 @@ onBeforeUnmount(() => {
           }
         }
       }
-      .weather {
+      .weekday {
         text-align: center;
         width: 100%;
+        font-size: 1.2rem;
+        font-weight: 500;
         text-overflow: ellipsis;
         overflow-x: hidden;
         white-space: nowrap;

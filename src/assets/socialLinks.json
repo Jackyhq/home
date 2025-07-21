@@ -2,25 +2,25 @@
   {
     "name": "BiliBili",
     "icon": "/images/icon/bilibili.png",
-    "tip": "(゜-゜)つロ 干杯 ~",
+    "tipKey": "social.bilibili",
     "url": "https://space.bilibili.com/511525107"
   },
   {
     "name": "Github",
     "icon": "/images/icon/github.png",
-    "tip": "去 Github 看看 ~",
+    "tipKey": "social.github",
     "url": "https://github.com/Jackyhq"
   },
   {
     "name": "Follow",
     "icon": "/images/icon/rss.png",
-    "tip": "看看我的RSS订阅 ~",
+    "tipKey": "social.follow",
     "url": "https://app.follow.is/share/users/Jacky"
   },
   {
     "name": "Email",
     "icon": "/images/icon/email.png",
-    "tip": "来封 Email ~",
+    "tipKey": "social.email",
     "url": "mailto:i@jackyw.cn"
   }
 ]

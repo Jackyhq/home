@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { setLocale, getLocale } from "@/locales";
 
 export const mainStore = defineStore("main", {
   state: () => {
@@ -8,6 +9,7 @@ export const mainStore = defineStore("main", {
       coverType: "1", // 壁纸种类
       siteStartShow: true, // 建站日期显示
       musicClick: false, // 音乐链接是否跳转
+      locale: getLocale(), // 当前语言
       
       backgroundShow: false, // 壁纸展示状态
       boxOpenState: false, // 盒子开启状态
@@ -70,6 +72,11 @@ export const mainStore = defineStore("main", {
     setImgLoadStatus(value) {
       this.imgLoadStatus = value;
     },
+    // 切换语言
+    setLocale(locale) {
+      this.locale = locale;
+      setLocale(locale);
+    },
   },
   persist: {
     key: "data",
@@ -80,6 +87,7 @@ export const mainStore = defineStore("main", {
       "musicClick",
       "playerLrcShow",
       "footerBlur",
+      "locale",
     ],
   },
 });

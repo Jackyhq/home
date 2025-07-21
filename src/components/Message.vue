@@ -34,7 +34,10 @@ import { Icon } from "@vicons/utils";
 import { QuoteLeft, QuoteRight } from "@vicons/fa";
 import { Error } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
+import { useI18n } from "vue-i18n";
+
 const store = mainStore();
+const { t } = useI18n();
 
 // 主页站点logo
 const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
@@ -52,8 +55,19 @@ const siteUrl = computed(() => {
 
 // 简介区域文字
 const descriptionText = reactive({
-  hello: import.meta.env.VITE_DESC_HELLO,
-  text: import.meta.env.VITE_DESC_TEXT,
+  hello: t('description.hello'),
+  text: t('description.text'),
+});
+
+// 监听语言变化，更新描述文本
+watch(() => store.currentLanguage, () => {
+  if (store.boxOpenState) {
+    descriptionText.hello = t('description.helloOther');
+    descriptionText.text = t('description.textOther');
+  } else {
+    descriptionText.hello = t('description.hello');
+    descriptionText.text = t('description.text');
+  }
 });
 
 // 切换右侧功能区
@@ -62,7 +76,7 @@ const changeBox = () => {
     store.boxOpenState = !store.boxOpenState;
   } else {
     ElMessage({
-      message: "当前页面宽度不足以开启盒子",
+      message: t('system.widthInsufficient'),
       grouping: true,
       icon: h(Error, {
         theme: "filled",
@@ -77,11 +91,11 @@ watch(
   () => store.boxOpenState,
   (value) => {
     if (value) {
-      descriptionText.hello = import.meta.env.VITE_DESC_HELLO_OTHER;
-      descriptionText.text = import.meta.env.VITE_DESC_TEXT_OTHER;
+      descriptionText.hello = t('description.helloOther');
+      descriptionText.text = t('description.textOther');
     } else {
-      descriptionText.hello = import.meta.env.VITE_DESC_HELLO;
-      descriptionText.text = import.meta.env.VITE_DESC_TEXT;
+      descriptionText.hello = t('description.hello');
+      descriptionText.text = t('description.text');
     }
   },
 );
