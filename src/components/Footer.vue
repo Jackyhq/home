@@ -13,6 +13,10 @@
           {{ fullYear }}
           <a :href="siteUrl">{{ siteAuthor }}</a>
         </span>
+        <!-- 站点备案 -->
+        <span v-if="siteIcp" class="icp" style="margin-left: 8px;">
+          <a :href="'https://beian.miit.gov.cn/'" target="_blank">{{ siteIcp }}</a>
+        </span>
         <!-- 以下信息请不要修改哦 -->
         <span class="hidden">
           &amp;&nbsp;Made&nbsp;by
@@ -21,8 +25,6 @@
           </a>
           <iframe src="https://status.jackyw.cn/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal;vertical-align: middle;margin-left: 8px;"></iframe>
         </span>
-        <!-- 站点备案 -->
-        
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
@@ -51,7 +53,7 @@ const startYear = ref(
   import.meta.env.VITE_SITE_START?.length >= 4 ? 
   import.meta.env.VITE_SITE_START.substring(0, 4) : null
 );
-// const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
+const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
 const siteAuthor = ref(import.meta.env.VITE_SITE_AUTHOR);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
