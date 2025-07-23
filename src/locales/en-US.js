@@ -106,9 +106,9 @@ export default {
 
   // Social links tips
   social: {
-    bilibili: '(゜-゜)つロ Cheers ~',
+    bilibili: 'BiliBili Cheers ~',
     github: 'Check out my Github ~',
-    follow: 'Check out my RSS feed ~',
+    photo: 'Check out my photo ~',
     email: 'Send me an Email ~',
     contactMe: 'Contact me here'
   }
