@@ -12,10 +12,10 @@
     "url": "https://github.com/Jackyhq"
   },
   {
-    "name": "Follow",
-    "icon": "/images/icon/rss.png",
-    "tipKey": "social.follow",
-    "url": "https://app.follow.is/share/users/Jacky"
+    "name": "Photographs",
+    "icon": "/images/icon/photo.png",
+    "tipKey": "social.photo",
+    "url": "https://photo.jackyw.cn/"
   },
   {
     "name": "Email",
