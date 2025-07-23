@@ -6,7 +6,14 @@
         :class="{ active: currentLocale === 'zh-CN' }"
         @click="setLanguage('zh-CN')"
       >
-        中文
+        简体
+      </button>
+      <button 
+        class="lang-btn" 
+        :class="{ active: currentLocale === 'zh-TW' }"
+        @click="setLanguage('zh-TW')"
+      >
+        繁體
       </button>
       <button 
         class="lang-btn" 
@@ -64,7 +71,7 @@ const setLanguage = (newLocale) => {
         color: #333;
       }
       
-      &:first-child {
+      &:not(:last-child) {
         border-right: 1px solid #ffffff20;
       }
     }

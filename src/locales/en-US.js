@@ -89,7 +89,8 @@ export default {
   // Settings page
   settings: {
     language: 'Language Settings',
-    chinese: '中文',
+    chinese: '简体中文',
+    traditionalChinese: '繁體中文',
     english: 'English',
     personalWallpaper: 'Personal Wallpaper',
     defaultWallpaper: 'Default Wallpaper',
