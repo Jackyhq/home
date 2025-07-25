@@ -115,9 +115,17 @@ const siteUrl = computed(() => {
     transition: opacity 0.15s ease-in-out;
   }
   @media (max-width: 720px) {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     &.blur {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-height: 720px) {
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    &.blur {
+      font-size: 12px;
     }
   }
   @media (max-width: 560px) {
@@ -128,6 +136,12 @@ const siteUrl = computed(() => {
   @media (max-width: 480px) {
     .hidden {
       display: none;
+    }
+  }
+  @media (max-width: 390px) and (max-height: 720px) {
+    font-size: 11px;
+    &.blur {
+      font-size: 11px;
     }
   }
 }

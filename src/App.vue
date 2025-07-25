@@ -194,13 +194,15 @@ onBeforeUnmount(() => {
     }
   }
   @media (max-height: 720px) {
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     .container {
-      height: 721px;
+      height: 100vh;
+      .all {
+        height: calc(100vh - 40px);
+        padding: 0 0.5rem;
+      }
       .more {
-        height: 721px;
-        width: calc(100% + 6px);
+        height: 100vh;
       }
       @media (min-width: 391px) {
         // w 1201px ~ max
@@ -212,7 +214,7 @@ onBeforeUnmount(() => {
         }
         @media (max-width: 1100px) { // w 993px ~ 1100px
           padding-left: 2vw;
-          padding-right: calc(2vw - 6px);
+          padding-right: 1.7vw;
         }
         @media (max-width: 992px) { // w 901px ~ 992px
           padding-left: 2.3vw;
@@ -220,37 +222,44 @@ onBeforeUnmount(() => {
         }
         @media (max-width: 900px) { // w 391px ~ 900px
           padding-left: 2vw;
-          padding-right: calc(2vw - 6px);
+          padding-right: 1.7vw;
         }
       }
     }
     .menu {
-      top: 605.64px; // 721px * 0.84
-      left: 170.5px; // 391 * 0.5 - 25px
-      @media (min-width: 391px) {
-        left: calc(50% - 25px);
+      top: calc(100vh - 80px);
+      left: calc(50% - 28px);
+      @media (max-width: 390px) {
+        left: calc(50% - 28px);
       }
     }
     .f-ter {
-      top: 675px; // 721px - 46px
+      bottom: 0;
+      position: fixed;
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
       @media (min-width: 391px) {
         padding-left: 6px;
       }
     }
   }
   @media (max-width: 390px) {
-    overflow-x: auto;
+    overflow: hidden;
     .container {
-      width: 391px;
+      width: 100vw;
+      .all {
+        height: calc(100vh - 40px);
+      }
     }
     .menu {
-      left: 167.5px; // 391px * 0.5 - 28px
+      left: calc(50% - 28px);
     }
     .f-ter {
-      width: 391px;
-    }
-    @media (min-height: 721px) {
-      overflow-y: hidden;
+      width: 100vw;
+      height: 40px;
+      line-height: 40px;
+      font-size: 11px;
     }
   }
 }
