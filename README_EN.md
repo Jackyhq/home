@@ -10,7 +10,7 @@ English | [Chinese](./README.md)
 Simple little homepage, optimized and improved based on the original author's project
 </p>
 
-![無名の主页](/screenshots/main.jpg)
+![Jackywhq的主页](/screenshots/home.png)
 
 ### 👀 Demo
 - [Original Author's Demo Site](https://www.imsyy.top)

@@ -10,7 +10,7 @@
 简单的小主页，基于原作者项目进行优化改进
 </p>
 
-![無名の主页](/screenshots/main.jpg)
+![Jackywhq的主页](/screenshots/home.png)
 
 ### 👀 Demo
 - [原作者演示站点](https://www.imsyy.top)
