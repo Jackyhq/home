@@ -22,9 +22,7 @@ Simple little homepage, optimized and improved based on the original author's pr
 - [x] Site description
 - [x] Hitokoto quotes
 - [x] Date and time
-- [x] Real-time weather
 - [x] Time progress bar
-- [x] Music player
 - [x] Mobile adaptation
 - [x] Multi-language support
 - [x] Custom backgrounds
@@ -92,19 +90,7 @@ Configure your social media links in `src/assets/socialLinks.json`.
 2. Name them in the format `background1.jpg`, `background2.jpg`
 3. Modify the image count in `src/components/Background/index.vue`
 
-### 🎵 Music Player Configuration
 
-This project uses the `APlayer` music player based on `MetingJS`:
-
-- Supports NetEase Cloud Music, QQ Music
-- Supports songs, playlists, albums, and other types
-- Only supported in Mainland China
-
-### 🌤️ Weather Function Configuration
-
-1. Register an account on [Amap Open Platform](https://console.amap.com/dev/index)
-2. Create a Web Service type application
-3. Get the API Key and fill it in the `.env` file
 
 ### 🎨 Custom Styles
 
@@ -128,26 +114,15 @@ The project is fully adapted for mobile devices, supporting:
 - **State Management**: [Pinia](https://pinia.vuejs.org/)
 - **Style Preprocessor**: SCSS
 - **Icon Libraries**: [IconPark](https://iconpark.oceanengine.com/), [xicons](https://xicons.org/)
-- **Music Player**: [APlayer](https://aplayer.js.org/)
 - **Font**: HarmonyOS Sans
 
 ### 📡 API Services
 
-- [Han Xiaohan WebAPI](https://api.vvhan.com/) - Comprehensive API service
+- [Jinge](https://api.dujin.org/) - Bing background API
 - [Botian API](https://api.btstu.cn/) - Random image API
-- [Teacher API](https://api.oioweb.cn/) - Weather API
-- [Amap Open Platform](https://lbs.amap.com/) - Geographic location and weather
 - [Hitokoto](https://hitokoto.cn/) - Random quote API
 
-### 🤝 Contributing
 
-Welcome to submit Issues and Pull Requests!
-
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ### 📄 License
 

@@ -57,11 +57,7 @@ export default {
   
 
   
-  // 音乐播放器
-  music: {
-    openPlayer: '打开音乐播放器',
-    lyricsLoading: '歌词加载中'
-  },
+
   
   // 一言
   hitokoto: {
@@ -103,10 +99,7 @@ export default {
     randomAnime: '随机动漫',
     personalization: '个性化调整',
     siteStartShow: '建站日期显示',
-    musicClickPanel: '音乐点击是否打开面板',
-    footerLyrics: '底栏歌词显示',
     footerBlur: '底栏背景模糊',
-
     language: '语言设置'
   }
 }

@@ -55,11 +55,7 @@ export default {
     day: '日'
   },
   
-  // 音樂播放器
-  music: {
-    openPlayer: '打開音樂播放器',
-    lyricsLoading: '歌詞加載中'
-  },
+
   
   // 一言
   hitokoto: {
@@ -101,8 +97,6 @@ export default {
     randomAnime: '隨機動漫',
     personalization: '個性化調整',
     siteStartShow: '建站日期顯示',
-    musicClickPanel: '音樂點擊是否打開面板',
-    footerLyrics: '底欄歌詞顯示',
     footerBlur: '底欄背景模糊',
     language: '語言設置'
   }

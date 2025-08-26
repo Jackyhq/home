@@ -21,24 +21,7 @@
             :inactive-icon="CloseSmall"
           />
         </div>
-        <div class="item">
-          <span class="text">{{ t('settings.musicClickPanel') }}</span>
-          <el-switch
-            v-model="musicClick"
-            inline-prompt
-            :active-icon="CheckSmall"
-            :inactive-icon="CloseSmall"
-          />
-        </div>
-        <div class="item">
-          <span class="text">{{ t('settings.footerLyrics') }}</span>
-          <el-switch
-            v-model="playerLrcShow"
-            inline-prompt
-            :active-icon="CheckSmall"
-            :inactive-icon="CloseSmall"
-          />
-        </div>
+
         <div class="item">
           <span class="text">{{ t('settings.footerBlur') }}</span>
           <el-switch
@@ -66,6 +49,7 @@ import { mainStore } from "@/store";
 import { storeToRefs } from "pinia";
 import { useI18n } from "vue-i18n";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import { ref, h } from 'vue';
 
 const { t } = useI18n();
 
@@ -73,8 +57,6 @@ const store = mainStore();
 const {
   coverType,
   siteStartShow,
-  musicClick,
-  playerLrcShow,
   footerBlur,
 } = storeToRefs(store);
 

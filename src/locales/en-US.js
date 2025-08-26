@@ -57,11 +57,7 @@ export default {
   
 
   
-  // Music player
-  music: {
-    openPlayer: 'Open Music Player',
-    lyricsLoading: 'Loading lyrics'
-  },
+
   
   // Hitokoto
   hitokoto: {
@@ -99,10 +95,7 @@ export default {
     randomAnime: 'Random Anime',
     personalization: 'Personalization',
     siteStartShow: 'Site Start Date Display',
-    musicClickPanel: 'Music Click Opens Panel',
-    footerLyrics: 'Footer Lyrics Display',
     footerBlur: 'Footer Background Blur',
-
   },
 
   // Social links tips

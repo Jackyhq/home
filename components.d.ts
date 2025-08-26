@@ -25,8 +25,6 @@ declare module '@vue/runtime-core' {
     Loading: typeof import('./src/components/Loading.vue')['default']
     Message: typeof import('./src/components/Message.vue')['default']
     MoreContent: typeof import('./src/components/MoreContent.vue')['default']
-    Music: typeof import('./src/components/Music.vue')['default']
-    Player: typeof import('./src/components/Player.vue')['default']
     Set: typeof import('./src/components/Set.vue')['default']
     SocialLinks: typeof import('./src/components/SocialLinks.vue')['default']
     TimeCapsule: typeof import('./src/components/TimeCapsule.vue')['default']

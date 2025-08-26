@@ -22,7 +22,6 @@
 - [x] 站点简介
 - [x] Hitokoto 一言
 - [x] 日期及时间
-- [x] 实时天气
 - [x] 时光进度条
 - [x] 移动端适配
 - [x] 多语言支持
@@ -113,7 +112,6 @@ pnpm build
 - **状态管理**: [Pinia](https://pinia.vuejs.org/zh/)
 - **样式预处理**: SCSS
 - **图标库**: [IconPark](https://iconpark.oceanengine.com/), [xicons](https://xicons.org/)
-- **音乐播放器**: [APlayer](https://aplayer.js.org/)
 - **字体**: HarmonyOS Sans
 
 ### 📡 API 服务
