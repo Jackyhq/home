@@ -95,8 +95,6 @@ export default {
     personalWallpaper: '个性壁纸',
     defaultWallpaper: '默认壁纸',
     dailyImage: '每日一图',
-    randomLandscape: '随机风景',
-    randomAnime: '随机动漫',
     personalization: '个性化调整',
     siteStartShow: '建站日期显示',
     footerBlur: '底栏背景模糊',

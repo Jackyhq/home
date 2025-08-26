@@ -91,8 +91,6 @@ export default {
     personalWallpaper: 'Personal Wallpaper',
     defaultWallpaper: 'Default Wallpaper',
     dailyImage: 'Daily Image',
-    randomLandscape: 'Random Landscape',
-    randomAnime: 'Random Anime',
     personalization: 'Personalization',
     siteStartShow: 'Site Start Date Display',
     footerBlur: 'Footer Background Blur',

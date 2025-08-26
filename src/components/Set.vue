@@ -6,8 +6,6 @@
           <el-radio-group v-model="coverType" text-color="#ffffff" @change="radioChange">
             <el-radio value="0" size="large" border>{{ t('settings.defaultWallpaper') }}</el-radio>
             <el-radio value="1" size="large" border>{{ t('settings.dailyImage') }}</el-radio>
-            <el-radio value="2" size="large" border>{{ t('settings.randomLandscape') }}</el-radio>
-            <el-radio value="3" size="large" border>{{ t('settings.randomAnime') }}</el-radio>
           </el-radio-group>
         </div>
       </el-collapse-item>

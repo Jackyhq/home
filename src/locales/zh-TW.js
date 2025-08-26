@@ -93,8 +93,6 @@ export default {
     personalWallpaper: '個性壁紙',
     defaultWallpaper: '默認壁紙',
     dailyImage: '每日一圖',
-    randomLandscape: '隨機風景',
-    randomAnime: '隨機動漫',
     personalization: '個性化調整',
     siteStartShow: '建站日期顯示',
     footerBlur: '底欄背景模糊',
