@@ -24,7 +24,6 @@
 - [x] 日期及时间
 - [x] 实时天气
 - [x] 时光进度条
-- [x] 音乐播放器
 - [x] 移动端适配
 - [x] 多语言支持
 - [x] 自定义背景
@@ -92,20 +91,6 @@ pnpm build
 2. 按 `background1.jpg`, `background2.jpg` 格式命名
 3. 在 `src/components/Background/index.vue` 中修改图片数量
 
-### 🎵 音乐播放器配置
-
-本项目使用基于 `MetingJS` 的 `APlayer` 音乐播放器：
-
-- 支持网易云音乐、QQ音乐
-- 支持歌曲、播放列表、专辑等多种类型
-- 仅支持中国大陆地区
-
-### 🌤️ 天气功能配置
-
-1. 注册 [高德开放平台](https://console.amap.com/dev/index) 账号
-2. 创建 Web 服务类型的应用
-3. 获取 API Key 并填入 `.env` 文件
-
 ### 🎨 自定义样式
 
 项目使用 SCSS 进行样式管理：
@@ -133,10 +118,8 @@ pnpm build
 
 ### 📡 API 服务
 
-- [韩小韩 WebAPI](https://api.vvhan.com/) - 综合API服务
+- [缙哥哥](https://api.dujin.org/) - 必应背景API
 - [搏天 API](https://api.btstu.cn/) - 随机图片API
-- [教书先生 API](https://api.oioweb.cn/) - 天气API
-- [高德开放平台](https://lbs.amap.com/) - 地理位置和天气
 - [Hitokoto 一言](https://hitokoto.cn/) - 随机句子API
 
 ### 📄 开源协议
@@ -151,4 +134,5 @@ pnpm build
 
 
 **原项目地址**: [https://github.com/imsyy/home](https://github.com/imsyy/home)
+
 
