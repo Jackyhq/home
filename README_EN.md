@@ -3,20 +3,21 @@ English | [Chinese](./README.md)
 > [!IMPORTANT]
 > ## About This Fork Version
 > This is a fork version based on the original project by [imsyy](https://github.com/imsyy/home). The original project is a clean and beautiful personal homepage project. This fork maintains the original functionality while adding some personal customizations and optimizations.
->
 
-<p>
-<strong><h2>無名の Homepage - Fork Version</h2></strong>
-Simple little homepage, optimized and improved based on the original author's project
+<p align="center">
+<strong><h2 align="center">無名の Homepage - Fork Version</h2></strong>
+<p align="center">Simple little homepage, optimized and improved based on the original author's project</p>
 </p>
 
-![Jackywhq的主页](/screenshots/home.png)
+<p align="center">
+  <img src="/screenshots/home.png" alt="Jackywhq's Homepage" width="750">
+</p>
 
-### 👀 Demo
+## 👀 Demo
 - [Original Author's Demo Site](https://www.imsyy.top)
 - [Original Author's Dev Version](https://home-imsyy.vercel.app)
 
-### 🎉 Features
+## 🎉 Features
 
 - [x] Loading animation
 - [x] Site description
@@ -28,14 +29,14 @@ Simple little homepage, optimized and improved based on the original author's pr
 - [x] Custom backgrounds
 - [x] Responsive design
 
-### 🚀 Quick Start
+## 🚀 Quick Start
 
-#### Requirements
+### Requirements
 
 - **Node.js** >= 16.16.0
 - **npm** >= 8.15.0 or **pnpm** >= 7.0.0
 
-#### Installation & Running
+### Installation & Running
 
 ```bash
 # Clone the project
@@ -58,8 +59,9 @@ pnpm build
 pnpm preview
 ```
 
-### ⚙️ Deployment Methods
-#### Static File Deployment
+## ⚙️ Deployment Methods
+
+### Static File Deployment
 
 ```bash
 # Build the project
@@ -68,7 +70,9 @@ pnpm build
 # Upload files in the dist directory to your server
 ```
 
-#### Custom Website Links
+### Custom Configuration
+
+#### Website Links
 
 Configure in `src/assets/siteLinks.json`:
 
@@ -80,26 +84,25 @@ Configure in `src/assets/siteLinks.json`:
 }
 ```
 
-#### Custom Social Links
+#### Social Media Links
 
 Configure your social media links in `src/assets/socialLinks.json`.
 
-#### Custom Background Images
+#### Background Images
 
 1. Place images in the `public/images/` directory
 2. Name them in the format `background1.jpg`, `background2.jpg`
 3. Modify the image count in `src/components/Background/index.vue`
 
 
-
-### 🎨 Custom Styles
+## 🎨 Custom Styles
 
 The project uses SCSS for style management:
 
 - `src/style/global.scss` - Global styles
 - `src/style/style.scss` - Main style file
 
-### 📱 Mobile Adaptation
+## 📱 Mobile Adaptation
 
 The project is fully adapted for mobile devices, supporting:
 
@@ -107,7 +110,7 @@ The project is fully adapted for mobile devices, supporting:
 - Touch operations
 - Mobile-optimized interactive experience
 
-### 🛠️ Technology Stack
+## 🛠️ Technology Stack
 
 - **Frontend Framework**: [Vue 3](https://vuejs.org/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
@@ -116,23 +119,21 @@ The project is fully adapted for mobile devices, supporting:
 - **Icon Libraries**: [IconPark](https://iconpark.oceanengine.com/), [xicons](https://xicons.org/)
 - **Font**: HarmonyOS Sans
 
-### 📡 API Services
+## 📡 API Services
 
 - [Bing Wallpaper API](https://github.com/TimothyYe/bing-wallpaper) - Bing wallpaper API
-- [Botian API](https://api.btstu.cn/) - Random image API
 - [Hitokoto](https://hitokoto.cn/) - Random quote API
 
-
-
-### 📄 License
+## 📄 License
 
 This project continues to be developed based on the original author's open source license. Please comply with the relevant license terms.
 
-### 🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 - Thanks to the original author [imsyy](https://github.com/imsyy) for creating this excellent project
 - Thanks to all developers who contributed to the project
 - Thanks to all API service providers
 
+---
 
 **Original Project**: [https://github.com/imsyy/home](https://github.com/imsyy/home)
