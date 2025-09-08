@@ -118,7 +118,7 @@ The project is fully adapted for mobile devices, supporting:
 
 ### 📡 API Services
 
-- [Jinge](https://api.dujin.org/) - Bing background API
+- [Bing Wallpaper API](https://github.com/TimothyYe/bing-wallpaper) - Bing wallpaper API
 - [Botian API](https://api.btstu.cn/) - Random image API
 - [Hitokoto](https://hitokoto.cn/) - Random quote API
 

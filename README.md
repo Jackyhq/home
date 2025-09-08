@@ -116,7 +116,7 @@ pnpm build
 
 ### 📡 API 服务
 
-- [缙哥哥](https://api.dujin.org/) - 必应背景API
+- [Bing Wallpaper API](https://github.com/TimothyYe/bing-wallpaper) - 必应壁纸API
 - [搏天 API](https://api.btstu.cn/) - 随机图片API
 - [Hitokoto 一言](https://hitokoto.cn/) - 随机句子API
 

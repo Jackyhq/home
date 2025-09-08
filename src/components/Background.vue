@@ -41,12 +41,8 @@ const changeBg = (type) => {
   if (type == 0) {
     bgUrl.value = `/images/background${bgRandom}.jpg`;
   } else if (type == 1) {
-    bgUrl.value = "https://api.dujin.org/bing/1920.php";
-  } else if (type == 2) {
-    bgUrl.value = "https://api.btstu.cn/sjbz/?lx=fengjing";
-  } else if (type == 3) {
-    bgUrl.value = "https://api.btstu.cn/sjbz/?lx=dongman";
-  }
+    bgUrl.value = "https://bing.cdn.jackyw.cn/?format=image&resolution=UHD&index=0&mkt=zh-CN";
+  } 
 };
 
 // 图片加载完成
