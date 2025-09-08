@@ -75,10 +75,10 @@ const siteUrl = computed(() => {
 // 更新日志
 const upData = reactive({
   new: [
-    "采用 Vue 进行重构",
-    "壁纸支持个性化设置",
+    "背景设置",
+    "个性化设置",
   ],
-  fix: ["移动端动画及细节", "图标更换为 IconPark"],
+  fix: ["移动端动画及细节", "图标更换"],
 });
 
 // 跳转源代码仓库
