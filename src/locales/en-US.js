@@ -20,8 +20,8 @@ export default {
   description: {
     hello: 'Hello!',
     text: 'A small site established in the 21st century, surviving on the edge of the internet',
-    helloOther: 'Hi there!',
-    textOther: 'A place to collect memories and share technology'
+    helloOther: 'Oops !',
+    textOther: 'Oh, you found out.'
   },
   
   // Time capsule

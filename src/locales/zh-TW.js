@@ -20,8 +20,8 @@ export default {
   description: {
     hello: 'Hello!',
     text: '一個建立於 21 世紀的小站，存活於互聯網的邊緣',
-    helloOther: 'Hi there!',
-    textOther: '一個收藏回憶與分享技術的地方'
+    helloOther: 'Oops !',
+    textOther: '哎呀，這都被你發現了'
   },
   
   // 時光膠囊
