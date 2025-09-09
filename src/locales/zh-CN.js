@@ -34,7 +34,8 @@ export default {
     passed: '已度过',
     remaining: '剩余',
     hours: '小时',
-    days: '天'
+    days: '天',
+    progress: '进度：'
   },
   
   // 星期

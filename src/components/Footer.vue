@@ -10,16 +10,16 @@
           -
         </span>
         {{ fullYear }}
-        <a :href="siteUrl">{{ siteAuthor }}</a>
+        <a :href="siteUrl" :aria-label="'Website of ' + siteAuthor">{{ siteAuthor }}</a>
       </span>
       <!-- 站点备案 -->
       <span v-if="siteIcp" class="icp" style="margin-left: 8px;">
-        <a :href="'https://beian.miit.gov.cn/'" target="_blank">{{ siteIcp }}</a>
+        <a :href="'https://beian.miit.gov.cn/'" target="_blank" aria-label="ICP registration information">{{ siteIcp }}</a>
       </span>
       <!-- 以下信息请不要修改哦 -->
       <span class="hidden">
         &amp;&nbsp;Made&nbsp;by
-        <a :href="config.github" target="_blank">
+        <a :href="config.github" target="_blank" :aria-label="'GitHub profile of ' + config.author">
           {{ config.author }}
         </a>
       </span>

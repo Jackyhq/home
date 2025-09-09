@@ -34,7 +34,8 @@ export default {
     passed: 'passed',
     remaining: 'remaining',
     hours: 'hours',
-    days: 'days'
+    days: 'days',
+    progress: 'progress: '
   },
   
   // Weekdays

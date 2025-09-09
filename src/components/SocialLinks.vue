@@ -10,7 +10,7 @@
         @mouseenter="socialTip = t(item.tipKey)"
         @mouseleave="socialTip = t('social.contactMe')"
       >
-        <img class="icon" :src="item.icon" height="24" />
+        <img class="icon" :src="item.icon" height="24" :alt="t(item.tipKey)" />
       </a>
     </div>
     <span class="tip">{{ socialTip }}</span>

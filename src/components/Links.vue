@@ -19,7 +19,7 @@
             {{ t('timeCapsule.remaining') }}&nbsp;{{ item.remaining }}&nbsp;{{ tag === "day" ? t('timeCapsule.hours') : t('timeCapsule.days') }}
           </span>
         </div>
-        <el-progress :text-inside="true" :stroke-width="20" :percentage="parseFloat(item.percentage)" />
+        <el-progress :text-inside="true" :stroke-width="20" :percentage="parseFloat(item.percentage)" :aria-label="item.name + t('timeCapsule.progress') + item.percentage + '%'" />
       </div>
       <!-- 建站日期 -->
       <div v-if="store.siteStartShow" class="capsule-item start">
