@@ -41,7 +41,7 @@ const changeBg = (type) => {
   if (type == 0) {
     bgUrl.value = `/images/background${bgRandom}.jpg`;
   } else if (type == 1) {
-    bgUrl.value = "https://bing.cdn.jackyw.cn/?format=image&resolution=UHD&index=0&mkt=zh-CN";
+    bgUrl.value = "https://bing.cdn.jackyw.cn/?format=image&resolution=UHD&index=0&mkt=random";
   } 
 };
 
