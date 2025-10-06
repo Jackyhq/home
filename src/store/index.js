@@ -6,7 +6,7 @@ export const mainStore = defineStore("main", {
     return {
       imgLoadStatus: false, // 壁纸加载状态
       innerWidth: null, // 当前窗口宽度
-      coverType: "1", // 壁纸种类
+      coverType: "0", // 壁纸种类
       siteStartShow: true, // 建站日期显示
       locale: getLocale(), // 当前语言
       
