@@ -20,6 +20,21 @@ export default ({ mode }) =>
       Components({
         resolvers: [ElementPlusResolver()],
       }),
+      {
+        name: 'copy-static-files',
+        generateBundle() {
+          this.emitFile({
+            type: 'asset',
+            fileName: 'robots.txt',
+            source: require('fs').readFileSync('robots.txt', 'utf-8')
+          });
+          this.emitFile({
+            type: 'asset',
+            fileName: 'sitemap.xml',
+            source: require('fs').readFileSync('sitemap.xml', 'utf-8')
+          });
+        }
+      },
       VitePWA({
         registerType: "autoUpdate",
         workbox: {
