@@ -6,6 +6,12 @@
     "url": "https://space.bilibili.com/511525107"
   },
   {
+    "name": "Instagram",
+    "icon": "/images/icon/instagram.png",
+    "tipKey": "social.instagram",
+    "url": "https://www.instagram.com/jackywhq"
+  },
+  {
     "name": "Github",
     "icon": "/images/icon/github.png",
     "tipKey": "social.github",
