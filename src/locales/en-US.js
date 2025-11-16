@@ -101,6 +101,7 @@ export default {
   social: {
     bilibili: 'BiliBili Cheers ~',
     github: 'Check out my Github ~',
+    instagram: 'Visit my Instagram ~',
     photo: 'Check out my photo ~',
     email: 'Send me an Email ~',
     contactMe: 'Contact me here'

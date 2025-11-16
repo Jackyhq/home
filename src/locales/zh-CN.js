@@ -86,6 +86,7 @@ export default {
   social: {
     bilibili: '(゜-゜)つロ 干杯 ~',
     github: '去 Github 看看 ~',
+    instagram: '来我的 Instagram ~',
     photo: '看看我拍的相片 ~',
     email: '来封 Email ~',
     contactMe: '通过这里联系我吧'

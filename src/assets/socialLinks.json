@@ -12,6 +12,12 @@
     "url": "https://github.com/Jackyhq"
   },
   {
+    "name": "Instagram",
+    "icon": "/images/icon/instagram.png",
+    "tipKey": "social.instagram",
+    "url": "https://www.instagram.com/jackywhq"
+  },
+  {
     "name": "Photographs",
     "icon": "/images/icon/photo.png",
     "tipKey": "social.photo",
