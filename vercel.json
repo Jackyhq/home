@@ -13,6 +13,16 @@
     },
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?jackyw\\.uk"
+        }
+      ],
+      "destination": "/index-uk.html"
+    },
+    {
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

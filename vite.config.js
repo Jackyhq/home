@@ -1,5 +1,7 @@
 import { defineConfig, loadEnv } from "vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { resolve } from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
 import { VitePWA } from "vite-plugin-pwa";
@@ -9,6 +11,32 @@ import Components from "unplugin-vue-components/vite";
 import viteCompression from "vite-plugin-compression";
 
 const srcDir = fileURLToPath(new URL("./src", import.meta.url));
+
+const createLocalizedEntryHtml = () => {
+  let outDir = "dist";
+
+  return {
+    name: "localized-entry-html",
+    apply: "build",
+    configResolved(config) {
+      outDir = config.build.outDir;
+    },
+    writeBundle() {
+      const outputDir = resolve(process.cwd(), outDir);
+      const indexPath = resolve(outputDir, "index.html");
+      if (!existsSync(indexPath)) return;
+
+      const ukHtml = readFileSync(indexPath, "utf8")
+        .replace(/<html\s+lang="zh-CN">/, '<html lang="en">')
+        .replace(
+          /<link\s+rel="canonical"\s+href="https:\/\/jackyw\.cn\/"\s*\/?>/,
+          '<link rel="canonical" href="https://jackyw.uk/" />',
+        );
+
+      writeFileSync(resolve(outputDir, "index-uk.html"), ukHtml);
+    },
+  };
+};
 
 // https://vite.dev/config/
 export default ({ mode }) => {
@@ -29,6 +57,7 @@ export default ({ mode }) => {
         workbox: {
           skipWaiting: true,
           clientsClaim: true,
+          navigateFallback: null,
           runtimeCaching: [
             {
               urlPattern: /(.*?)\.(js|css|woff2|woff|ttf)/, // js / css 静态资源缓存
@@ -94,6 +123,7 @@ export default ({ mode }) => {
         },
       }),
       viteCompression(),
+      createLocalizedEntryHtml(),
     ],
     server: {
       port: 3000,
