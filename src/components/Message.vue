@@ -34,6 +34,7 @@ import { Icon } from "@vicons/utils";
 import { QuoteLeft, QuoteRight } from "@vicons/fa";
 import { Error } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
+import { getRuntimeSiteHostParts } from "@/utils/site.js";
 import { useI18n } from "vue-i18n";
 
 const store = mainStore();
@@ -42,16 +43,7 @@ const { t } = useI18n();
 // 主页站点logo
 const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 // 站点链接
-const siteUrl = computed(() => {
-  const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "jackyw.cn".split(".");
-  // 判断协议前缀
-  if (url.startsWith("http://") || url.startsWith("https://")) {
-    const urlFormat = url.replace(/^(https?:\/\/)/, "");
-    return urlFormat.split(".");
-  }
-  return url.split(".");
-});
+const siteUrl = computed(() => getRuntimeSiteHostParts());
 
 // 简介区域文字
 const descriptionText = reactive({

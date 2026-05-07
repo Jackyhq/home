@@ -33,6 +33,7 @@
 
 <script setup>
 import { mainStore } from "@/store";
+import { getRuntimeSiteHref } from "@/utils/site.js";
 import config from "@/../package.json";
 
 const store = mainStore();
@@ -49,15 +50,7 @@ const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
 const siteAuthor = ref(
   import.meta.env.VITE_SITE_AUTHOR || import.meta.env.VITE_SITE_ANTHOR || config.author,
 );
-const siteUrl = computed(() => {
-  const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "https://jackyw.cn";
-  // 判断协议前缀
-  if (!url.startsWith("http://") && !url.startsWith("https://")) {
-    return "//" + url;
-  }
-  return url;
-});
+const siteUrl = computed(() => getRuntimeSiteHref());
 </script>
 
 <style lang="scss" scoped>
