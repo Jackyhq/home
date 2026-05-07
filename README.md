@@ -17,8 +17,8 @@
 
 ## 👀 演示站点
 
-- [原作者演示站点](https://www.imsyy.top)
-- [原作者开发版](https://home-imsyy.vercel.app)
+- https://jackyw.cn/
+- https://jackyw.uk/
 
 ## 🎉 功能特性
 
