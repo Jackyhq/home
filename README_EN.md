@@ -17,8 +17,8 @@ English | [Chinese](./README.md)
 
 ## 👀 Demo
 
-- [Original Author's Demo Site](https://www.imsyy.top)
-- [Original Author's Dev Version](https://home-imsyy.vercel.app)
+- https://jackyw.cn/
+- https://jackyw.uk/
 
 ## 🎉 Features
 
