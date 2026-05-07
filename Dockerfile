@@ -1,17 +1,15 @@
 # 构建应用
-FROM node:18 AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
+RUN corepack enable
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 COPY . .
-RUN [ ! -e ".env" ] && cp .env.example .env || true
-RUN npm run build
+RUN pnpm build
 
-# 最小化镜像
-FROM node:18-alpine
-WORKDIR /app
-COPY --from=builder /app/dist ./dist
-RUN npm install -g http-server
+# 静态文件服务
+FROM nginx:1.27-alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 EXPOSE 12445
-CMD ["http-server", "dist", "-p", "12445"]

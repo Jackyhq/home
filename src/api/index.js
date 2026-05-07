@@ -1,5 +1,3 @@
-import axios from "axios";
-
 /**
  * 一言
  */
@@ -8,9 +6,9 @@ import axios from "axios";
 export const getHitokoto = async () => {
   try {
     const res = await fetch("https://v1.hitokoto.cn", {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'Accept': 'application/json',
+        Accept: "application/json",
       },
     });
     if (!res.ok) {
@@ -19,11 +17,11 @@ export const getHitokoto = async () => {
     const data = await res.json();
     return data;
   } catch (error) {
-    console.error('一言API调用失败:', error);
+    console.error("一言API调用失败:", error);
     // 返回备用数据
     return {
       hitokoto: "生活就像海洋，只有意志坚强的人才能达到彼岸。",
-      from: "马克思"
+      from: "马克思",
     };
   }
 };

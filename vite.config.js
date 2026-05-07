@@ -1,16 +1,20 @@
-/* eslint-disable no-undef */
 import { defineConfig, loadEnv } from "vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-import { resolve } from "path";
+import process from "node:process";
+import { fileURLToPath } from "node:url";
 import { VitePWA } from "vite-plugin-pwa";
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import viteCompression from "vite-plugin-compression";
 
-// https://vitejs.dev/config/
-export default ({ mode }) =>
-  defineConfig({
+const srcDir = fileURLToPath(new URL("./src", import.meta.url));
+
+// https://vite.dev/config/
+export default ({ mode }) => {
+  const env = loadEnv(mode, process.cwd());
+
+  return defineConfig({
     plugins: [
       vue(),
       AutoImport({
@@ -43,9 +47,9 @@ export default ({ mode }) =>
           ],
         },
         manifest: {
-          name: loadEnv(mode, process.cwd()).VITE_SITE_NAME,
-          short_name: loadEnv(mode, process.cwd()).VITE_SITE_NAME,
-          description: loadEnv(mode, process.cwd()).VITE_SITE_DES,
+          name: env.VITE_SITE_NAME,
+          short_name: env.VITE_SITE_NAME,
+          description: env.VITE_SITE_DES,
           display: "standalone",
           start_url: "/",
           theme_color: "#424242",
@@ -92,14 +96,13 @@ export default ({ mode }) =>
       viteCompression(),
     ],
     server: {
-      port: "3000",
-      open: true,
+      port: 3000,
     },
     resolve: {
       alias: [
         {
           find: "@",
-          replacement: resolve(__dirname, "src"),
+          replacement: srcDir,
         },
       ],
     },
@@ -107,7 +110,6 @@ export default ({ mode }) =>
       preprocessorOptions: {
         scss: {
           charset: false,
-          additionalData: `@import "./src/style/global.scss";`,
         },
       },
     },
@@ -120,3 +122,4 @@ export default ({ mode }) =>
       },
     },
   });
+};

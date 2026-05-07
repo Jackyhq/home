@@ -1,7 +1,9 @@
 简体中文 | [English](./README_EN.md)
 
 > [!IMPORTANT]
+>
 > ## 关于此分支版本
+>
 > 这是基于原作者 [imsyy](https://github.com/imsyy/home) 项目的分支版本。原项目是一个简洁美观的个人主页项目，本分支在保持原有功能的基础上进行了一些个人定制和优化。
 
 <p align="center">
@@ -14,6 +16,7 @@
 </p>
 
 ## 👀 演示站点
+
 - [原作者演示站点](https://www.imsyy.top)
 - [原作者开发版](https://home-imsyy.vercel.app)
 
@@ -33,8 +36,8 @@
 
 ### 环境要求
 
-- **Node.js** >= 16.16.0
-- **npm** >= 8.15.0 或 **pnpm** >= 7.0.0
+- **Node.js** >= 20.19.0 或 >= 22.12.0（推荐 Node 22）
+- **pnpm** >= 10.0.0
 
 ### 安装与运行
 
@@ -52,11 +55,18 @@ pnpm install
 # 开发模式运行
 pnpm dev
 
+# 需要局域网访问时运行
+pnpm dev:host
+
 # 构建生产版本
 pnpm build
 
 # 预览构建结果
 pnpm preview
+
+# 检查代码质量与格式
+pnpm lint
+pnpm format:check
 ```
 
 ## ⚙️ 部署方式
@@ -68,6 +78,16 @@ pnpm preview
 pnpm build
 
 # 将 dist 目录下的文件上传到你的服务器
+```
+
+### Docker 部署
+
+```bash
+# 构建并启动
+docker compose up --build
+
+# 默认访问端口
+http://localhost:12445
 ```
 
 ### 自定义配置
@@ -92,7 +112,7 @@ pnpm build
 
 1. 将图片放入 `public/images/` 目录
 2. 按 `background1.jpg`, `background2.jpg` 格式命名
-3. 在 `src/components/Background/index.vue` 中修改图片数量
+3. 在 `src/components/Background.vue` 中修改图片数量
 
 ## 🎨 自定义样式
 
@@ -136,5 +156,3 @@ pnpm build
 ---
 
 **原项目地址**: [https://github.com/imsyy/home](https://github.com/imsyy/home)
-
-

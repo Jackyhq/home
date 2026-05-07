@@ -1,25 +1,32 @@
 <template>
-    <div class="line">
-      <Icon size="20">
-        <Link />
-      </Icon>
-      <hourglass-full theme="two-tone" size="24" :fill="['#efefef', '#00000020']" />
-      <span class="title">{{ t('timeCapsule.title') }}</span>
-    </div>
+  <div class="line">
+    <Icon size="20">
+      <Link />
+    </Icon>
+    <hourglass-full theme="two-tone" size="24" :fill="['#efefef', '#00000020']" />
+    <span class="title">{{ t("timeCapsule.title") }}</span>
+  </div>
   <div class="time-capsule">
     <div v-if="timeData" class="all-capsule">
       <div v-for="(item, tag, index) in timeData" :key="index" class="capsule-item">
         <div class="item-title">
           <span class="percentage">
-            {{ item.name }}{{ t('timeCapsule.passed') }}
+            {{ item.name }}{{ t("timeCapsule.passed") }}
             <strong>{{ item.passed }}</strong>
-            {{ tag === "day" ? t('timeCapsule.hours') : t('timeCapsule.days') }}
+            {{ tag === "day" ? t("timeCapsule.hours") : t("timeCapsule.days") }}
           </span>
           <span class="remaining">
-            {{ t('timeCapsule.remaining') }}&nbsp;{{ item.remaining }}&nbsp;{{ tag === "day" ? t('timeCapsule.hours') : t('timeCapsule.days') }}
+            {{ t("timeCapsule.remaining") }}&nbsp;{{ item.remaining }}&nbsp;{{
+              tag === "day" ? t("timeCapsule.hours") : t("timeCapsule.days")
+            }}
           </span>
         </div>
-        <el-progress :text-inside="true" :stroke-width="20" :percentage="parseFloat(item.percentage)" :aria-label="item.name + t('timeCapsule.progress') + item.percentage + '%'" />
+        <el-progress
+          :text-inside="true"
+          :stroke-width="20"
+          :percentage="parseFloat(item.percentage)"
+          :aria-label="item.name + t('timeCapsule.progress') + item.percentage + '%'"
+        />
       </div>
       <!-- 建站日期 -->
       <div v-if="store.siteStartShow" class="capsule-item start">
@@ -30,6 +37,8 @@
 </template>
 
 <script setup>
+import { Icon } from "@vicons/utils";
+import { Link } from "@vicons/fa";
 import { HourglassFull } from "@icon-park/vue-next";
 import { getTimeCapsule, siteDateStatistics } from "@/utils/getTime.js";
 import { mainStore } from "@/store";
@@ -57,18 +66,18 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss" scoped>
-  .line {
-    margin: 1rem 0.25rem 0.5rem;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    animation: fade 0.5s;
-    .title {
-      margin-left: 8px;
-      font-size: 1.15rem;
-      text-shadow: 0 0 5px #00000050;
-    }
+.line {
+  margin: 1rem 0.25rem 0.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  animation: fade 0.5s;
+  .title {
+    margin-left: 8px;
+    font-size: 1.15rem;
+    text-shadow: 0 0 5px #00000050;
   }
+}
 .time-capsule {
   width: 100%;
   backdrop-filter: blur(10px);
@@ -123,9 +132,11 @@ onBeforeUnmount(() => {
 }
 
 @keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
-
-// 移除与时间胶囊相关的所有内容，包括 hourglass-full、时光胶囊、timeData、getTimeCapsule、siteDateStatistics、startDate、startDateText、timeInterval、相关模板和进度条

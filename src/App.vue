@@ -63,7 +63,6 @@ const loadComplete = () => {
     // 欢迎提示
     helloInit();
     // 默哀模式
-    
   });
 };
 
@@ -85,7 +84,7 @@ onMounted(() => {
   // 屏蔽右键
   document.oncontextmenu = () => {
     ElMessage({
-      message: t('system.rightClickDisabled'),
+      message: t("system.rightClickDisabled"),
       grouping: true,
       duration: 2000,
     });
@@ -96,9 +95,11 @@ onMounted(() => {
   window.addEventListener("mousedown", (event) => {
     if (event.button == 1) {
       store.backgroundShow = !store.backgroundShow;
-      const status = store.backgroundShow ? t('system.wallpaperModeOn') : t('system.wallpaperModeOff');
+      const status = store.backgroundShow
+        ? t("system.wallpaperModeOn")
+        : t("system.wallpaperModeOff");
       ElMessage({
-        message: t('system.wallpaperMode', { status }),
+        message: t("system.wallpaperMode", { status }),
         grouping: true,
       });
     }
@@ -208,19 +209,23 @@ onBeforeUnmount(() => {
         // w 1201px ~ max
         padding-left: 0.7vw;
         padding-right: 0.25vw;
-        @media (max-width: 1200px) { // w 1101px ~ 1280px
+        @media (max-width: 1200px) {
+          // w 1101px ~ 1280px
           padding-left: 2.3vw;
           padding-right: 1.75vw;
         }
-        @media (max-width: 1100px) { // w 993px ~ 1100px
+        @media (max-width: 1100px) {
+          // w 993px ~ 1100px
           padding-left: 2vw;
           padding-right: 1.7vw;
         }
-        @media (max-width: 992px) { // w 901px ~ 992px
+        @media (max-width: 992px) {
+          // w 901px ~ 992px
           padding-left: 2.3vw;
           padding-right: 1.7vw;
         }
-        @media (max-width: 900px) { // w 391px ~ 900px
+        @media (max-width: 900px) {
+          // w 391px ~ 900px
           padding-left: 2vw;
           padding-right: 1.7vw;
         }

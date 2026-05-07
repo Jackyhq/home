@@ -12,8 +12,16 @@ export const getCurrentTime = () => {
   let hour = time.getHours() < 10 ? "0" + time.getHours() : time.getHours();
   let minute = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
   let second = time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds();
-  
-  const weekdayKeys = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+
+  const weekdayKeys = [
+    "sunday",
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+  ];
   let currentTime = {
     year,
     month,
@@ -31,10 +39,10 @@ export const getTimeCapsule = () => {
   const { t } = i18n.global;
   const now = dayjs();
   const dayText = {
-    day: t('timeCapsule.day'),
-    week: t('timeCapsule.week'),
-    month: t('timeCapsule.month'),
-    year: t('timeCapsule.year'),
+    day: t("timeCapsule.day"),
+    week: t("timeCapsule.week"),
+    month: t("timeCapsule.month"),
+    year: t("timeCapsule.year"),
   };
   /**
    * 计算时间差的函数
@@ -75,27 +83,27 @@ export const getTimeCapsule = () => {
 export const helloInit = () => {
   const { t } = i18n.global;
   const hour = new Date().getHours();
-  let hello = null;
+  let hello;
   if (hour < 6) {
-    hello = t('greeting.dawn');
+    hello = t("greeting.dawn");
   } else if (hour < 9) {
-    hello = t('greeting.morning');
+    hello = t("greeting.morning");
   } else if (hour < 12) {
-    hello = t('greeting.forenoon');
+    hello = t("greeting.forenoon");
   } else if (hour < 14) {
-    hello = t('greeting.noon');
+    hello = t("greeting.noon");
   } else if (hour < 17) {
-    hello = t('greeting.afternoon');
+    hello = t("greeting.afternoon");
   } else if (hour < 19) {
-    hello = t('greeting.evening');
+    hello = t("greeting.evening");
   } else if (hour < 22) {
-    hello = t('greeting.night');
+    hello = t("greeting.night");
   } else {
-    hello = t('greeting.lateNight');
+    hello = t("greeting.lateNight");
   }
   ElMessage({
     dangerouslyUseHTMLString: true,
-    message: `<strong>${hello}</strong> ${t('welcome.message')}`,
+    message: `<strong>${hello}</strong> ${t("welcome.message")}`,
   });
 };
 
@@ -119,5 +127,5 @@ export const siteDateStatistics = (startDate) => {
     months += 12;
   }
 
-  return t('siteStats.running', { years, months, days });
+  return t("siteStats.running", { years, months, days });
 };

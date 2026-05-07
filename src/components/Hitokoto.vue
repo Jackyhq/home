@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="hitokoto cards"
-    @click.stop
-  >
+  <div class="hitokoto cards" @click.stop>
     <!-- 一言内容 -->
     <Transition name="el-fade-in-linear" mode="out-in">
       <div :key="hitokotoData.text" class="content" @click="updateHitokoto">
@@ -16,17 +13,15 @@
 <script setup>
 import { Error } from "@icon-park/vue-next";
 import { getHitokoto } from "@/api";
-import { mainStore } from "@/store";
 import debounce from "@/utils/debounce.js";
 import { useI18n } from "vue-i18n";
 
-const store = mainStore();
 const { t } = useI18n();
 
 // 一言数据
 const hitokotoData = reactive({
-  text: t('hitokoto.default'),
-  from: t('hitokoto.author'),
+  text: t("hitokoto.default"),
+  from: t("hitokoto.author"),
 });
 
 // 获取一言数据
@@ -35,16 +30,16 @@ const getHitokotoData = async () => {
     const result = await getHitokoto();
     hitokotoData.text = result.hitokoto;
     hitokotoData.from = result.from;
-  } catch (error) {
+  } catch {
     ElMessage({
-      message: t('hitokoto.failed'),
+      message: t("hitokoto.failed"),
       icon: h(Error, {
         theme: "filled",
         fill: "#efefef",
       }),
     });
-    hitokotoData.text = t('hitokoto.default');
-    hitokotoData.from = t('hitokoto.author');
+    hitokotoData.text = t("hitokoto.default");
+    hitokotoData.from = t("hitokoto.author");
   }
 };
 

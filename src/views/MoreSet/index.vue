@@ -74,10 +74,7 @@ const siteUrl = computed(() => {
 
 // 更新日志
 const upData = reactive({
-  new: [
-    "背景设置",
-    "个性化设置",
-  ],
+  new: ["背景设置", "个性化设置"],
   fix: ["移动端动画及细节", "图标更换"],
 });
 

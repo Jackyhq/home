@@ -1,5 +1,3 @@
-import { isEqual } from "lodash-es";
-
 let mainCursor;
 
 const lerp = (a, b, n) => {
@@ -17,6 +15,9 @@ const getStyle = (el, attr) => {
   }
   return false;
 };
+
+const isSamePosition = (current, previous) =>
+  current?.x === previous?.x && current?.y === previous?.y;
 
 const cursorInit = () => {
   mainCursor = new Cursor();
@@ -94,7 +95,7 @@ class Cursor {
     } else {
       this.pos.prev = this.pos.curr;
     }
-    if (!isEqual(this.pos.curr, this.pos.prev)) {
+    if (!isSamePosition(this.pos.curr, this.pos.prev)) {
       requestAnimationFrame(() => this.render());
     }
   }

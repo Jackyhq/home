@@ -24,7 +24,7 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 // 社交链接提示
-const socialTip = ref(t('social.contactMe'));
+const socialTip = ref(t("social.contactMe"));
 </script>
 
 <style lang="scss" scoped>

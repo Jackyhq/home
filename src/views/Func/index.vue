@@ -5,16 +5,15 @@
       <el-col :span="12">
         <div class="left">
           <Hitokoto />
-          
         </div>
       </el-col>
       <el-col :span="12">
         <div class="right cards">
           <div class="time">
             <div class="date">
-              <span>{{ currentTime.year }}&nbsp;{{ t('dateFormat.year') }}&nbsp;</span>
-              <span>{{ currentTime.month }}&nbsp;{{ t('dateFormat.month') }}&nbsp;</span>
-              <span>{{ currentTime.day }}&nbsp;{{ t('dateFormat.day') }}&nbsp;</span>
+              <span>{{ currentTime.year }}&nbsp;{{ t("dateFormat.year") }}&nbsp;</span>
+              <span>{{ currentTime.month }}&nbsp;{{ t("dateFormat.month") }}&nbsp;</span>
+              <span>{{ currentTime.day }}&nbsp;{{ t("dateFormat.day") }}&nbsp;</span>
             </div>
             <div class="text">
               <span> {{ currentTime.hour }}:{{ currentTime.minute }}:{{ currentTime.second }}</span>

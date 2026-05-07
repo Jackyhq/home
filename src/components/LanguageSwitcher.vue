@@ -1,22 +1,22 @@
 <template>
   <div class="language-switcher">
     <div class="language-buttons">
-      <button 
-        class="lang-btn" 
+      <button
+        class="lang-btn"
         :class="{ active: currentLocale === 'zh-CN' }"
         @click="setLanguage('zh-CN')"
       >
         简体
       </button>
-      <button 
-        class="lang-btn" 
+      <button
+        class="lang-btn"
         :class="{ active: currentLocale === 'zh-TW' }"
         @click="setLanguage('zh-TW')"
       >
         繁體
       </button>
-      <button 
-        class="lang-btn" 
+      <button
+        class="lang-btn"
         :class="{ active: currentLocale === 'en-US' }"
         @click="setLanguage('en-US')"
       >
@@ -50,7 +50,7 @@ const setLanguage = (newLocale) => {
     border-radius: 20px;
     background-color: #ffffff30;
     overflow: hidden;
-    
+
     .lang-btn {
       flex: 1;
       padding: 8px 16px;
@@ -61,16 +61,16 @@ const setLanguage = (newLocale) => {
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
-      
+
       &:hover {
         background-color: #ffffff20;
       }
-      
+
       &.active {
         background-color: #fff;
         color: #333;
       }
-      
+
       &:not(:last-child) {
         border-right: 1px solid #ffffff20;
       }

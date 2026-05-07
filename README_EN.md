@@ -1,7 +1,9 @@
 English | [Chinese](./README.md)
 
 > [!IMPORTANT]
+>
 > ## About This Fork Version
+>
 > This is a fork version based on the original project by [imsyy](https://github.com/imsyy/home). The original project is a clean and beautiful personal homepage project. This fork maintains the original functionality while adding some personal customizations and optimizations.
 
 <p align="center">
@@ -14,6 +16,7 @@ English | [Chinese](./README.md)
 </p>
 
 ## 👀 Demo
+
 - [Original Author's Demo Site](https://www.imsyy.top)
 - [Original Author's Dev Version](https://home-imsyy.vercel.app)
 
@@ -33,8 +36,8 @@ English | [Chinese](./README.md)
 
 ### Requirements
 
-- **Node.js** >= 16.16.0
-- **npm** >= 8.15.0 or **pnpm** >= 7.0.0
+- **Node.js** >= 20.19.0 or >= 22.12.0 (Node 22 recommended)
+- **pnpm** >= 10.0.0
 
 ### Installation & Running
 
@@ -52,11 +55,18 @@ pnpm install
 # Run in development mode
 pnpm dev
 
+# Run with LAN access
+pnpm dev:host
+
 # Build for production
 pnpm build
 
 # Preview build result
 pnpm preview
+
+# Check code quality and formatting
+pnpm lint
+pnpm format:check
 ```
 
 ## ⚙️ Deployment Methods
@@ -68,6 +78,16 @@ pnpm preview
 pnpm build
 
 # Upload files in the dist directory to your server
+```
+
+### Docker Deployment
+
+```bash
+# Build and start
+docker compose up --build
+
+# Default local URL
+http://localhost:12445
 ```
 
 ### Custom Configuration
@@ -92,8 +112,7 @@ Configure your social media links in `src/assets/socialLinks.json`.
 
 1. Place images in the `public/images/` directory
 2. Name them in the format `background1.jpg`, `background2.jpg`
-3. Modify the image count in `src/components/Background/index.vue`
-
+3. Modify the image count in `src/components/Background.vue`
 
 ## 🎨 Custom Styles
 

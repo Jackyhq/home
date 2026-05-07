@@ -55,20 +55,23 @@ const siteUrl = computed(() => {
 
 // 简介区域文字
 const descriptionText = reactive({
-  hello: t('description.hello'),
-  text: t('description.text'),
+  hello: t("description.hello"),
+  text: t("description.text"),
 });
 
 // 监听语言变化，更新描述文本
-watch(() => store.currentLanguage, () => {
-  if (store.boxOpenState) {
-    descriptionText.hello = t('description.helloOther');
-    descriptionText.text = t('description.textOther');
-  } else {
-    descriptionText.hello = t('description.hello');
-    descriptionText.text = t('description.text');
-  }
-});
+watch(
+  () => store.currentLanguage,
+  () => {
+    if (store.boxOpenState) {
+      descriptionText.hello = t("description.helloOther");
+      descriptionText.text = t("description.textOther");
+    } else {
+      descriptionText.hello = t("description.hello");
+      descriptionText.text = t("description.text");
+    }
+  },
+);
 
 // 切换右侧功能区
 const changeBox = () => {
@@ -76,7 +79,7 @@ const changeBox = () => {
     store.boxOpenState = !store.boxOpenState;
   } else {
     ElMessage({
-      message: t('system.widthInsufficient'),
+      message: t("system.widthInsufficient"),
       grouping: true,
       icon: h(Error, {
         theme: "filled",
@@ -91,11 +94,11 @@ watch(
   () => store.boxOpenState,
   (value) => {
     if (value) {
-      descriptionText.hello = t('description.helloOther');
-      descriptionText.text = t('description.textOther');
+      descriptionText.hello = t("description.helloOther");
+      descriptionText.text = t("description.textOther");
     } else {
-      descriptionText.hello = t('description.hello');
-      descriptionText.text = t('description.text');
+      descriptionText.hello = t("description.hello");
+      descriptionText.text = t("description.text");
     }
   },
 );

@@ -4,14 +4,14 @@
       <el-collapse-item :title="t('settings.personalWallpaper')" name="1">
         <div class="bg-set">
           <el-radio-group v-model="coverType" text-color="#ffffff" @change="radioChange">
-            <el-radio value="0" size="large" border>{{ t('settings.defaultWallpaper') }}</el-radio>
-            <el-radio value="1" size="large" border>{{ t('settings.dailyImage') }}</el-radio>
+            <el-radio value="0" size="large" border>{{ t("settings.defaultWallpaper") }}</el-radio>
+            <el-radio value="1" size="large" border>{{ t("settings.dailyImage") }}</el-radio>
           </el-radio-group>
         </div>
       </el-collapse-item>
       <el-collapse-item :title="t('settings.personalization')" name="2">
         <div class="item">
-          <span class="text">{{ t('settings.siteStartShow') }}</span>
+          <span class="text">{{ t("settings.siteStartShow") }}</span>
           <el-switch
             v-model="siteStartShow"
             inline-prompt
@@ -21,7 +21,7 @@
         </div>
 
         <div class="item">
-          <span class="text">{{ t('settings.footerBlur') }}</span>
+          <span class="text">{{ t("settings.footerBlur") }}</span>
           <el-switch
             v-model="footerBlur"
             inline-prompt
@@ -36,7 +36,6 @@
           <LanguageSwitcher />
         </div>
       </el-collapse-item>
-
     </el-collapse>
   </div>
 </template>
@@ -47,16 +46,12 @@ import { mainStore } from "@/store";
 import { storeToRefs } from "pinia";
 import { useI18n } from "vue-i18n";
 import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
-import { ref, h } from 'vue';
+import { ref, h } from "vue";
 
 const { t } = useI18n();
 
 const store = mainStore();
-const {
-  coverType,
-  siteStartShow,
-  footerBlur,
-} = storeToRefs(store);
+const { coverType, siteStartShow, footerBlur } = storeToRefs(store);
 
 // 默认选中项
 const activeName = ref("1");
@@ -64,7 +59,7 @@ const activeName = ref("1");
 // 壁纸切换
 const radioChange = () => {
   ElMessage({
-    message: t('system.wallpaperChanged'),
+    message: t("system.wallpaperChanged"),
     icon: h(SuccessPicture, {
       theme: "filled",
       fill: "#efefef",
@@ -150,7 +145,7 @@ const radioChange = () => {
             }
           }
         }
-        
+
         .language-item {
           justify-content: center;
         }
