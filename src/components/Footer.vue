@@ -9,7 +9,6 @@
           -
         </span>
         {{ fullYear }}
-        <a :href="siteUrl" :aria-label="'Website of ' + siteAuthor">{{ siteAuthor }}</a>
       </span>
       <!-- 站点备案 -->
       <span v-if="siteIcp" class="icp" style="margin-left: 8px">
@@ -33,7 +32,6 @@
 
 <script setup>
 import { mainStore } from "@/store";
-import { getRuntimeSiteHref } from "@/utils/site.js";
 import config from "@/../package.json";
 
 const store = mainStore();
@@ -47,10 +45,6 @@ const startYear = ref(
     : null,
 );
 const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
-const siteAuthor = ref(
-  import.meta.env.VITE_SITE_AUTHOR || import.meta.env.VITE_SITE_ANTHOR || config.author,
-);
-const siteUrl = computed(() => getRuntimeSiteHref());
 </script>
 
 <style lang="scss" scoped>

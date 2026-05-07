@@ -1,6 +1,6 @@
 {
   "installCommand": "npx --yes pnpm@10.13.1 install --frozen-lockfile",
-  "buildCommand": "pnpm build",
+  "buildCommand": "npx --yes pnpm@10.13.1 build",
   "outputDirectory": "dist",
   "rewrites": [
     {

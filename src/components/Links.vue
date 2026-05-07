@@ -1,8 +1,5 @@
 <template>
   <div class="line">
-    <Icon size="20">
-      <Link />
-    </Icon>
     <hourglass-full theme="two-tone" size="24" :fill="['#efefef', '#00000020']" />
     <span class="title">{{ t("timeCapsule.title") }}</span>
   </div>
@@ -37,8 +34,6 @@
 </template>
 
 <script setup>
-import { Icon } from "@vicons/utils";
-import { Link } from "@vicons/fa";
 import { HourglassFull } from "@icon-park/vue-next";
 import { getTimeCapsule, siteDateStatistics } from "@/utils/getTime.js";
 import { mainStore } from "@/store";
