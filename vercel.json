@@ -1,5 +1,19 @@
-{"rewrites":[
-  {"source":"/robots.txt","destination":"/robots.txt"},
-  {"source":"/sitemap.xml","destination":"/sitemap.xml"},
-  {"source":"/(.*)","destination":"/index.html"}
-]}
+{
+  "installCommand": "npx --yes pnpm@10.13.1 install --frozen-lockfile",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
