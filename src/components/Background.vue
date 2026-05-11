@@ -11,14 +11,7 @@
     />
     <div :class="store.backgroundShow ? 'gray hidden' : 'gray'" />
     <Transition name="fade" mode="out-in">
-      <a
-        v-if="store.backgroundShow && store.coverType != '3'"
-        class="down"
-        :href="bgUrl"
-        target="_blank"
-      >
-        下载壁纸
-      </a>
+      <a v-if="store.backgroundShow" class="down" :href="bgUrl" target="_blank"> 下载壁纸 </a>
     </Transition>
   </div>
 </template>
@@ -28,7 +21,6 @@ import { mainStore } from "@/store";
 import { Error } from "@icon-park/vue-next";
 
 const store = mainStore();
-const bgUrl = ref(null);
 const imgTimeout = ref(null);
 const emit = defineEmits(["loadComplete"]);
 const remoteBgBaseUrl = "https://photos3.jackyw.cn/background";
@@ -36,13 +28,7 @@ const remoteBgBaseUrl = "https://photos3.jackyw.cn/background";
 // 本地兜底壁纸随机数
 // 请依据文件夹内的图片个数修改 Math.random() 后面的第一个数字
 const bgRandom = Math.floor(Math.random() * 9 + 1);
-
-// 更换壁纸链接
-const changeBg = (type) => {
-  if (type == 0) {
-    bgUrl.value = `${remoteBgBaseUrl}/background${bgRandom}.jpg`;
-  }
-};
+const bgUrl = ref(`${remoteBgBaseUrl}/background${bgRandom}.jpg`);
 
 // 图片加载完成
 const imgLoadComplete = () => {
@@ -73,19 +59,6 @@ const imgLoadError = () => {
   });
   bgUrl.value = `/images/background${bgRandom}.jpg`;
 };
-
-// 监听壁纸切换
-watch(
-  () => store.coverType,
-  (value) => {
-    changeBg(value);
-  },
-);
-
-onMounted(() => {
-  // 加载壁纸
-  changeBg(store.coverType);
-});
 
 onBeforeUnmount(() => {
   clearTimeout(imgTimeout.value);

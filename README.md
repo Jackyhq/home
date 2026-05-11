@@ -26,7 +26,6 @@
 - [x] 站点简介
 - [x] Hitokoto 一言
 - [x] 日期及时间
-- [x] 时光进度条
 - [x] 移动端适配
 - [x] 多语言支持
 - [x] 自定义背景
@@ -92,17 +91,27 @@ http://localhost:12445
 
 ### 自定义配置
 
+#### 站点信息
+
+在 `.env` 中配置站点名称、作者、关键词、简介、图标、建站年份和备案号等信息。
+
 #### 网站链接
 
 在 `src/assets/siteLinks.json` 中配置：
 
 ```json
-{
-  "icon": "Blog",
-  "name": "博客",
-  "link": "https://your-blog.com"
-}
+[
+  {
+    "nameKey": "siteLinks.photo.name",
+    "descriptionKey": "siteLinks.photo.description",
+    "metaKey": "siteLinks.photo.meta",
+    "url": "https://photo.example.com/",
+    "icon": "/images/icon/photo.png"
+  }
+]
 ```
+
+对应文案在 `src/locales/` 中维护。
 
 #### 社交媒体链接
 
@@ -110,9 +119,10 @@ http://localhost:12445
 
 #### 背景图片
 
-1. 将图片放入 `public/images/` 目录
-2. 按 `background1.jpg`, `background2.jpg` 格式命名
-3. 在 `src/components/Background.vue` 中修改图片数量
+1. 默认背景从远程地址加载
+2. 本地兜底图片放入 `public/images/` 目录
+3. 按 `background1.jpg`, `background2.jpg` 格式命名
+4. 在 `src/components/Background.vue` 中修改本地兜底图片数量
 
 ## 🎨 自定义样式
 
@@ -140,7 +150,6 @@ http://localhost:12445
 
 ## 📡 API 服务
 
-- [Bing Wallpaper API](https://github.com/TimothyYe/bing-wallpaper) - 必应壁纸API
 - [Hitokoto 一言](https://hitokoto.cn/) - 随机句子API
 
 ## 📄 开源协议

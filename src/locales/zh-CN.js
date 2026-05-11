@@ -20,22 +20,6 @@ export default {
   description: {
     hello: "Hello!",
     text: "一个建立于 21 世纪的小站，存活于互联网的边缘",
-    helloOther: "Oops !",
-    textOther: "哎呀，这都被你发现了",
-  },
-
-  // 时光胶囊
-  timeCapsule: {
-    title: "时光胶囊",
-    day: "今日",
-    week: "本周",
-    month: "本月",
-    year: "本年",
-    passed: "已度过",
-    remaining: "剩余",
-    hours: "小时",
-    days: "天",
-    progress: "进度：",
   },
 
   // 网站链接
@@ -86,16 +70,10 @@ export default {
   // 系统消息
   system: {
     rightClickDisabled: "为了浏览体验，本站禁用右键",
+    wallpaperMode: "{status}",
     wallpaperModeOn: "已开启壁纸展示状态",
     wallpaperModeOff: "已退出壁纸展示状态",
     siteUpdated: "站点已更新，刷新后生效",
-    widthInsufficient: "当前页面宽度不足以开启盒子",
-    wallpaperChanged: "壁纸更换成功",
-  },
-
-  // 建站统计
-  siteStats: {
-    running: "本站已经苟活了 {years} 年 {months} 月 {days} 天",
   },
 
   // 社交链接提示
@@ -106,16 +84,5 @@ export default {
     photo: "看看我拍的相片 ~",
     email: "来封 Email ~",
     contactMe: "通过这里联系我吧",
-  },
-
-  // 设置页面
-  settings: {
-    personalWallpaper: "个性壁纸",
-    defaultWallpaper: "默认壁纸",
-    dailyImage: "每日一图",
-    personalization: "个性化调整",
-    siteStartShow: "建站日期显示",
-    footerBlur: "底栏背景模糊",
-    language: "语言设置",
   },
 };

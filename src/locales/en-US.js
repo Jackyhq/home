@@ -20,22 +20,6 @@ export default {
   description: {
     hello: "Hello!",
     text: "A small site established in the 21st century, surviving on the edge of the internet",
-    helloOther: "Oops !",
-    textOther: "Oh, you found out.",
-  },
-
-  // Time capsule
-  timeCapsule: {
-    title: "Time Capsule",
-    day: "Today",
-    week: "This Week",
-    month: "This Month",
-    year: "This Year",
-    passed: "passed",
-    remaining: "remaining",
-    hours: "hours",
-    days: "days",
-    progress: "progress: ",
   },
 
   // Site links
@@ -91,28 +75,7 @@ export default {
     wallpaperMode: "Wallpaper display mode {status}",
     wallpaperModeOn: "enabled",
     wallpaperModeOff: "disabled",
-    widthInsufficient: "Current page width is insufficient to open the box",
     siteUpdated: "Site updated, refresh to take effect",
-    wallpaperChanged: "Wallpaper changed successfully",
-  },
-
-  // Site statistics
-  siteStats: {
-    running: "This site has been running for {years} years {months} months {days} days",
-  },
-
-  // Settings page
-  settings: {
-    language: "Language Settings",
-    chinese: "简体中文",
-    traditionalChinese: "繁體中文",
-    english: "English",
-    personalWallpaper: "Personal Wallpaper",
-    defaultWallpaper: "Default Wallpaper",
-    dailyImage: "Daily Image",
-    personalization: "Personalization",
-    siteStartShow: "Site Start Date Display",
-    footerBlur: "Footer Background Blur",
   },
 
   // Social links tips
