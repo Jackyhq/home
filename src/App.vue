@@ -7,13 +7,9 @@
   <Transition name="fade" mode="out-in">
     <main id="main" v-if="store.imgLoadStatus">
       <div class="container" v-show="!store.backgroundShow">
-        <section class="all" v-show="!store.setOpenState">
+        <section class="all">
           <MainLeft />
-          <MainRight v-show="!store.boxOpenState" />
-          <Box v-show="store.boxOpenState" />
-        </section>
-        <section class="more" v-show="store.setOpenState" @click="store.setOpenState = false">
-          <MoreSet />
+          <MainRight />
         </section>
       </div>
       <!-- 移动端菜单按钮 -->
@@ -27,7 +23,7 @@
       </Icon>
       <!-- 页脚 -->
       <Transition name="fade" mode="out-in">
-        <Footer class="f-ter" v-show="!store.backgroundShow && !store.setOpenState" />
+        <Footer class="f-ter" v-show="!store.backgroundShow" />
       </Transition>
     </main>
   </Transition>
@@ -43,8 +39,6 @@ import MainLeft from "@/views/Main/Left.vue";
 import MainRight from "@/views/Main/Right.vue";
 import Background from "@/components/Background.vue";
 import Footer from "@/components/Footer.vue";
-import Box from "@/views/Box/index.vue";
-import MoreSet from "@/views/MoreSet/index.vue";
 import cursorInit from "@/utils/cursor.js";
 import config from "@/../package.json";
 import { useI18n } from "vue-i18n";
@@ -65,17 +59,6 @@ const loadComplete = () => {
     // 默哀模式
   });
 };
-
-// 监听宽度变化
-watch(
-  () => store.innerWidth,
-  (value) => {
-    if (value < 721) {
-      store.boxOpenState = false;
-      store.setOpenState = false;
-    }
-  },
-);
 
 onMounted(() => {
   // 自定义鼠标
@@ -154,17 +137,6 @@ onBeforeUnmount(() => {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-    }
-    .more {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #00000080;
-      backdrop-filter: blur(20px);
-      z-index: 2;
-      animation: fade 0.5s;
     }
     @media (max-width: 1200px) {
       padding: 0 2vw;

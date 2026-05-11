@@ -10,7 +10,7 @@
       </div>
     </div>
     <!-- 简介 -->
-    <div class="description cards" @click="changeBox">
+    <div class="description cards">
       <div class="content">
         <Icon size="16">
           <QuoteLeft />
@@ -32,12 +32,9 @@
 <script setup>
 import { Icon } from "@vicons/utils";
 import { QuoteLeft, QuoteRight } from "@vicons/fa";
-import { Error } from "@icon-park/vue-next";
-import { mainStore } from "@/store";
 import { getRuntimeSiteHostParts } from "@/utils/site.js";
 import { useI18n } from "vue-i18n";
 
-const store = mainStore();
 const { t } = useI18n();
 
 // 主页站点logo
@@ -46,54 +43,10 @@ const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 const siteUrl = computed(() => getRuntimeSiteHostParts());
 
 // 简介区域文字
-const descriptionText = reactive({
+const descriptionText = computed(() => ({
   hello: t("description.hello"),
   text: t("description.text"),
-});
-
-// 监听语言变化，更新描述文本
-watch(
-  () => store.currentLanguage,
-  () => {
-    if (store.boxOpenState) {
-      descriptionText.hello = t("description.helloOther");
-      descriptionText.text = t("description.textOther");
-    } else {
-      descriptionText.hello = t("description.hello");
-      descriptionText.text = t("description.text");
-    }
-  },
-);
-
-// 切换右侧功能区
-const changeBox = () => {
-  if (store.getInnerWidth >= 721) {
-    store.boxOpenState = !store.boxOpenState;
-  } else {
-    ElMessage({
-      message: t("system.widthInsufficient"),
-      grouping: true,
-      icon: h(Error, {
-        theme: "filled",
-        fill: "#efefef",
-      }),
-    });
-  }
-};
-
-// 监听状态变化
-watch(
-  () => store.boxOpenState,
-  (value) => {
-    if (value) {
-      descriptionText.hello = t("description.helloOther");
-      descriptionText.text = t("description.textOther");
-    } else {
-      descriptionText.hello = t("description.hello");
-      descriptionText.text = t("description.text");
-    }
-  },
-);
+}));
 </script>
 
 <style lang="scss" scoped>

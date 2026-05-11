@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "nameKey": "siteLinks.photo.name",
+    "descriptionKey": "siteLinks.photo.description",
+    "metaKey": "siteLinks.photo.meta",
+    "url": "https://photo.jackyw.cn/",
+    "icon": "/images/icon/photo.png"
+  }
+]

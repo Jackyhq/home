@@ -38,6 +38,28 @@ export default {
     progress: "progress: ",
   },
 
+  // Site links
+  siteLinks: {
+    title: "Site Links",
+    eyebrow: "Photographs",
+    heading: "Photos and small moments from the road",
+    description:
+      "A quieter corner for landscapes, cities, daily life, and the bits of travel that felt worth keeping.",
+    openAria: "Open {name}",
+    tagsLabel: "Photo site tags",
+    tags: {
+      photography: "Photography",
+      travel: "Travel",
+      daily: "Daily",
+    },
+    photo: {
+      name: "Jacky's Photo Site",
+      description:
+        "Photos, places passed through, and the occasional story that light decided to leave behind.",
+      meta: "photo.jackyw.cn",
+    },
+  },
+
   // Weekdays
   weekdays: {
     sunday: "Sunday",
