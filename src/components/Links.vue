@@ -80,7 +80,7 @@ const tagKeys = ["siteLinks.tags.photography", "siteLinks.tags.travel", "siteLin
   background-color: #00000040;
   border-radius: 6px;
   padding: 1rem;
-  margin: 0;
+  margin: 1rem 0 0;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   animation: fade 0.5s;
 
