@@ -38,6 +38,26 @@ export default {
     progress: "进度：",
   },
 
+  // 网站链接
+  siteLinks: {
+    title: "网站链接",
+    eyebrow: "Photographs",
+    heading: "相片与路上的一些瞬间",
+    description: "这里整理了我拍下的风景、城市、日常和旅途片段，也算是这个主页之外更安静的一面。",
+    openAria: "打开 {name}",
+    tagsLabel: "相片网站标签",
+    tags: {
+      photography: "摄影",
+      travel: "旅行",
+      daily: "日常",
+    },
+    photo: {
+      name: "Jacky 的相片网站",
+      description: "一些照片、一些路过的地方，以及偶尔被光线留下来的故事。",
+      meta: "photo.jackyw.cn",
+    },
+  },
+
   // 星期
   weekdays: {
     sunday: "星期日",

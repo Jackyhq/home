@@ -8,7 +8,7 @@
     <!-- 功能区 -->
     <Func />
     <!-- 网站链接 -->
-    <Link />
+    <SiteLinks />
   </div>
 </template>
 
@@ -16,7 +16,7 @@
 import { mainStore } from "@/store";
 import { getRuntimeSiteHostParts } from "@/utils/site.js";
 import Func from "@/views/Func/index.vue";
-import Link from "@/components/Links.vue";
+import SiteLinks from "@/components/Links.vue";
 const store = mainStore();
 
 // 站点链接
