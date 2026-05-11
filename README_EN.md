@@ -26,7 +26,6 @@ English | [Chinese](./README.md)
 - [x] Site description
 - [x] Hitokoto quotes
 - [x] Date and time
-- [x] Time progress bar
 - [x] Mobile adaptation
 - [x] Multi-language support
 - [x] Custom backgrounds
@@ -92,17 +91,27 @@ http://localhost:12445
 
 ### Custom Configuration
 
+#### Site Information
+
+Configure the site name, author, keywords, description, icons, start year, and ICP record in `.env`.
+
 #### Website Links
 
 Configure in `src/assets/siteLinks.json`:
 
 ```json
-{
-  "icon": "Blog",
-  "name": "Blog",
-  "link": "https://your-blog.com"
-}
+[
+  {
+    "nameKey": "siteLinks.photo.name",
+    "descriptionKey": "siteLinks.photo.description",
+    "metaKey": "siteLinks.photo.meta",
+    "url": "https://photo.example.com/",
+    "icon": "/images/icon/photo.png"
+  }
+]
 ```
+
+The matching copy is maintained in `src/locales/`.
 
 #### Social Media Links
 
@@ -110,9 +119,10 @@ Configure your social media links in `src/assets/socialLinks.json`.
 
 #### Background Images
 
-1. Place images in the `public/images/` directory
-2. Name them in the format `background1.jpg`, `background2.jpg`
-3. Modify the image count in `src/components/Background.vue`
+1. The default background loads from the remote background host
+2. Place local fallback images in the `public/images/` directory
+3. Name them in the format `background1.jpg`, `background2.jpg`
+4. Modify the local fallback image count in `src/components/Background.vue`
 
 ## 🎨 Custom Styles
 
@@ -140,7 +150,6 @@ The project is fully adapted for mobile devices, supporting:
 
 ## 📡 API Services
 
-- [Bing Wallpaper API](https://github.com/TimothyYe/bing-wallpaper) - Bing wallpaper API
 - [Hitokoto](https://hitokoto.cn/) - Random quote API
 
 ## 📄 License

@@ -6,11 +6,6 @@ import { isEnglishSiteHost } from "@/utils/site.js";
 
 // 检测浏览器语言
 const getDefaultLocale = () => {
-  const savedLocale = localStorage.getItem("locale");
-  if (savedLocale) {
-    return savedLocale;
-  }
-
   if (isEnglishSiteHost()) {
     return "en-US";
   }
@@ -36,14 +31,3 @@ const i18n = createI18n({
 });
 
 export default i18n;
-
-// 切换语言的工具函数
-export const setLocale = (locale) => {
-  i18n.global.locale.value = locale;
-  localStorage.setItem("locale", locale);
-};
-
-// 获取当前语言
-export const getLocale = () => {
-  return i18n.global.locale.value;
-};

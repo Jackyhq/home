@@ -20,22 +20,6 @@ export default {
   description: {
     hello: "Hello!",
     text: "一個建立於 21 世紀的小站，存活於互聯網的邊緣",
-    helloOther: "Oops !",
-    textOther: "哎呀，這都被你發現了",
-  },
-
-  // 時光膠囊
-  timeCapsule: {
-    title: "時光膠囊",
-    day: "今日",
-    week: "本週",
-    month: "本月",
-    year: "本年",
-    passed: "已度過",
-    remaining: "剩餘",
-    hours: "小時",
-    days: "天",
-    progress: "進度：",
   },
 
   // 網站鏈接
@@ -86,16 +70,10 @@ export default {
   // 系統消息
   system: {
     rightClickDisabled: "為了瀏覽體驗，本站禁用右鍵",
+    wallpaperMode: "{status}",
     wallpaperModeOn: "已開啟壁紙展示狀態",
     wallpaperModeOff: "已退出壁紙展示狀態",
     siteUpdated: "站點已更新，刷新後生效",
-    widthInsufficient: "當前頁面寬度不足以開啟盒子",
-    wallpaperChanged: "壁紙更換成功",
-  },
-
-  // 建站統計
-  siteStats: {
-    running: "本站已經苟活了 {years} 年 {months} 月 {days} 天",
   },
 
   // 社交鏈接提示
@@ -106,16 +84,5 @@ export default {
     photo: "看看我拍的相片 ~",
     email: "來封 Email ~",
     contactMe: "通過這裡聯繫我吧",
-  },
-
-  // 設置頁面
-  settings: {
-    personalWallpaper: "個性壁紙",
-    defaultWallpaper: "默認壁紙",
-    dailyImage: "每日一圖",
-    personalization: "個性化調整",
-    siteStartShow: "建站日期顯示",
-    footerBlur: "底欄背景模糊",
-    language: "語言設置",
   },
 };

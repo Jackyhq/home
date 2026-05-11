@@ -3,13 +3,11 @@ import "@/style/style.scss";
 import App from "@/App.vue";
 // 引入 pinia
 import { createPinia } from "pinia";
-import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 // 引入 i18n
 import i18n from "@/locales";
 
 const app = createApp(App);
 const pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
 
 app.use(pinia);
 app.use(i18n);
