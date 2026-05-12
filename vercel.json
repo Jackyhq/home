@@ -1,6 +1,6 @@
 {
-  "installCommand": "npx pnpm@10 install --frozen-lockfile",
-  "buildCommand": "npx pnpm@10 build",
+  "installCommand": "corepack enable && pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm build",
   "outputDirectory": "dist",
   "rewrites": [
     {
