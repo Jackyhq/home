@@ -15,6 +15,7 @@
         <a
           :href="'https://beian.miit.gov.cn/'"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="ICP registration information"
           >{{ siteIcp }}</a
         >
